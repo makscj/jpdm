@@ -1,0 +1,20 @@
+<TITLE>
+Participants in Sports by Family Type of Household, Sex, Usual Economic Activities of Own Parents, Usual Working Hours per Week of Own Mother and Education (Children Attending School)
+<SUBTITLE> 
+Both Sexes, Both Husband and Wife Working
+<EXCEL COLUMN RANGE>
+R-AM
+<VECTOR LABELS>
+Elementary school
+Junior high school
+High school
+Junior college or technological college
+College or university
+Graduate school
+<DATA>
+ 506	 111	 171	 310	 535	 277	 145	 353	 76	 32	 36	 19	 503	 361	 943	 304	 251	 354	 460	 439	 124	 227
+ 444	 132	 355	 420	 431	 337	 360	 303	 46	 79	 78	 7	 489	 261	 632	 217	 169	 261	 655	 496	 226	 197
+ 348	 176	 299	 349	 342	 225	 277	 296	 32	 71	 63	 4	 512	 135	 291	 129	 119	 212	 491	 491	 345	 222
+ 39	 16	 54	 45	 36	 38	 34	 54	 9	 3	 3	 2	 103	 20	 34	 24	 13	 30	 39	 79	 37	 11
+ 194	 58	 125	 188	 217	 138	 158	 177	 50	 7	 13	 0	 462	 92	 174	 160	 106	 146	 217	 310	 160	 73
+ 4	 6	 4	 5	 10	 2	 8	 4	 1	-	 5	-	 17	 2	 13	 9	 6	 11	 14	 17	 18	 6
