@@ -1,16 +1,37 @@
 import math
 
+'''
+Computes the Euclidean distance (L2 norm) between two vectors.
+'''
 def euclidean(vector1, vector2):
+	return Ln_norm(vector1, vector2, 2);
+
+'''
+Computes the Manhattan distance (L1 norm) between two vectors. 
+'''
+def manhattan(vector1, vector2):
+	return Ln_norm(vector1, vector2, 1);
+
+
+def infNorm(vector1, vector2):
 	if(len(vector1) != len(vector2)):
 		print("Vectors are not the same length");
 
-	distance = 0;
+	distance = 0.0;
+	# Max
+	M = 0;
 	for i in range(len(vector1)):
-		distance += (vector1[i] - vector2[i])**2;
+		distance = math.fabs(vector1[i] - vector2[i]);
+		if distance > M:
+			M = distance;
 
-	return math.sqrt(distance);
+	return M;	
 
+'''
+Computes the Ln norm for two vector, V1 and V2, for any given n. 
 
+Note, that for n < 1, the Ln norm is not a metric. 
+'''
 def Ln_norm(vector1, vector2, n):
 	if(len(vector1) != len(vector2)):
 		print("Vectors are not the same length");
@@ -23,6 +44,9 @@ def Ln_norm(vector1, vector2, n):
 	return distance**(1.0/n);	
 
 
+'''
+Computes the Jaccard distance between two vectors.
+'''
 def jaccard(vector1, vector2):
 	if(len(vector1) != len(vector2)):
 		print("Vectors are not the same length");
@@ -36,7 +60,9 @@ def jaccard(vector1, vector2):
 
 	return 1 - numerator/denominator;
 
-
+'''
+Computes the cosine difference between two vectors. This is the angle between vectors.
+'''
 def cosine(vector1, vector2):
 	if(len(vector1) != len(vector2)):
 		print("Vectors are not the same length");
