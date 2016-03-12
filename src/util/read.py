@@ -12,13 +12,15 @@ class Read:
 
    def __init__(self):
       verbose = False
-      fileRange = [1, 6]
+      dir = os.path.dirname(sys.argv[0])
+      listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
+      fileRange = [1, len(os.listdir(listDirPath))];
       skipFiles = []
       dataSets = []
       for i in range(fileRange[0], fileRange[1]+1):
          if i in skipFiles:
             continue
-         dir = os.path.dirname(sys.argv[0])
+         
          # print "DIR", dir
          filePath =  os.path.join(dir, "../../data/FormattedDataFiles/T"+str(i)+".txt")
          dataSets.append(self.readFile(filePath)) # Read and store data as Dataset object
