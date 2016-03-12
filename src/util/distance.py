@@ -60,9 +60,9 @@ def jaccard(vector1, vector2):
 
 	return 1 - numerator/denominator;
 
-'''
+"""
 Computes the cosine difference between two vectors. This is the angle between vectors.
-'''
+"""
 def cosine(vector1, vector2):
 	if(len(vector1) != len(vector2)):
 		print("Vectors are not the same length");

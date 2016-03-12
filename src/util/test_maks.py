@@ -1,7 +1,8 @@
 import distance
+import cluster
 
 
-
+'''
 x = [1,2,3];
 y = [1,3,5];
 
@@ -25,4 +26,11 @@ print distance.cosine(x,y);
 print distance.klDiv(x,y);
 
 print distance.klDiv(y,x);
+'''
 
+
+data = {'x':[1,2,3], 'y':[.5,1.5,2.5], 'z' : [4,8,6]};
+
+#cluster.hierarchical(data, 2, cluster.singlelink, distance.euclidean);
+
+print cluster.singlelink(['x','z'],['y'],data);
