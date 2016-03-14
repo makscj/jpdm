@@ -1,12 +1,14 @@
 import itertools
 import distance
+import random
 
 '''
-data - the data to be clustered, represented as a string=>list dictionary
+data - the data to be clustered, represented as a {string=>list} dictionary
 k - The number of desired clusters
 link - the link distance to use for computing 'closest' clusters.
 
-returns - a vector of len(data) which maps each key in data to a cluster value, from 0 to k-1. 
+returns a dictionary of {string=>integer}, where each key corresponds to a key in the data
+dictionary, and every integer is the cluster it belongs to. 
 '''
 def hierarchical(data, k, link):
 
@@ -14,6 +16,9 @@ def hierarchical(data, k, link):
 	#	This comprehension creates a dictionary where the keys are all the keys from the data file, and all the
 	#	values are unique integers from [|data.keys()|]. In other words, assigning each key to a unique integer
 	#	which corresponds to assigning each key a different cluster. 
+
+	#	Note, this may now be irrelevant --- phi is never set until the end, so we could just initialize phi to be
+	#	an empty dictionary.
 	#
 	phi = {v[0]:v[1] for v in zip(data.keys(), [v for v in range(len(data.keys()))])};
 
@@ -53,9 +58,39 @@ def hierarchical(data, k, link):
 
 	return phi;
 
+'''
+Method that runs the Gonzalez greedy algorithm for k-Center Clustering.
 
-def gonzalez(set1, set2, k):
-	phi = {v[0]:v[1] for v in zip(data.keys(), [v for v in range(len(data.keys()))])};
+data - dictionary of {string=>list}
+k - integer, the number of desired clusters
+distance - function, the distance metric we want to use
+
+returns a dictionary of {string=>integer}, where each key corresponds to a key in the data
+dictionary, and every integer is the cluster it belongs to. 
+'''
+def gonzalez(data, k, distance):
+	# Initialize every point to the first cluster
+	phi = {v[0]:0 for v in data.keys()};
+	# Create the list of cluster centers
+	c = [0 for v in range(k)];
+	# Arbitrarily choose the first cluster center
+	initial = random.randrange(0,len(data.keys()));
+	c[0] = data[data.keys()[initial]];
+	# Loop through the number of clusters we want
+	for i in range(1,k):
+		# Find the point farthest away from it's current assigned cluster center
+		Max = 0;
+		c[i] = 0;
+		for (key,val) in data.iteritems():
+			dist = distance(val,c[phi[key]])
+			if(dist > Max):
+				M = dist;
+				c[i] = val;
+		# Find the closest cluster center to each point
+		for key,val in data.iteritems():
+			if distance(val,c[phi[key]]) > distance(val, c[i]):
+				phi[key] = i;
+	return phi;
 
 
 def singlelink(set1, set2, data):
