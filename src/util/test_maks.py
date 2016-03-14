@@ -31,6 +31,5 @@ print distance.klDiv(y,x);
 
 data = {'x':[1,2,3], 'y':[.5,1.5,2.5], 'z' : [4,8,6]};
 
-#cluster.hierarchical(data, 2, cluster.singlelink, distance.euclidean);
+print cluster.hierarchical(data, 2, cluster.singlelink);
 
-print cluster.singlelink(['x','z'],['y'],data);
