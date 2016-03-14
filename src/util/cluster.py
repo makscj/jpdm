@@ -20,7 +20,9 @@ def hierarchical(data, k, link):
 	#	Note, this may now be irrelevant --- phi is never set until the end, so we could just initialize phi to be
 	#	an empty dictionary.
 	#
-	phi = {v[0]:v[1] for v in zip(data.keys(), [v for v in range(len(data.keys()))])};
+	#phi = {v[0]:v[1] for v in zip(data.keys(), [v for v in range(len(data.keys()))])};
+
+	phi = {};
 
 	# Assign each label to a cluster
 	clusters = [[ke] for ke in data.keys()];
@@ -47,7 +49,7 @@ def hierarchical(data, k, link):
 		# Merge the closest clusters
 		clusters[mini] = clusters[mini] + clusters[minj];
 		del clusters[minj];
-		number_of_clusters -=1;
+		number_of_clusters -= 1;
 
 	# Compute the final phi values
 	cval = 0;
@@ -92,6 +94,40 @@ def gonzalez(data, k, distance):
 				phi[key] = i;
 	return phi;
 
+
+def lloyds(data, k, distance):
+	keys = data.keys();
+	phi = {v[0]:0 for v in keys};
+	c = [[] for i in range(k)];
+	rando = random.sample(range(len(keys)), k);
+	hasNotChanged = lambda x,y: collections.Counter(x) == collections.Counter(y);
+	for i in range(k):
+		c[i] = data[keys[rando[i]]];
+
+	for loop in range(50):
+
+		for (key,val) in data.iteritems():
+			mind = float('inf');
+			mini = 0;
+			for i in range(k):
+				dist = distance(val, c[i])
+				if(dist < mind):
+					mind = dist;
+					mini = i;
+			phi[key] = mini;
+
+		for i in range(k):
+			avg = [0]*len(c[i]);
+			count = 0;
+			for key,val in data.iteritems():
+				if(phi[key] == i):
+					for dim in range(len(avg)):
+						avg[dim] += val[dim];
+					count += 1;
+			for dim in range(len(avg)):
+				avg[dim] /= count;
+			c[i] = avg;
+	return phi
 
 def singlelink(set1, set2, data):
 	# Create a list of lists for each list in data corresponding to set 1

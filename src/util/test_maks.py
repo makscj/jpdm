@@ -28,10 +28,12 @@ print distance.klDiv(x,y);
 print distance.klDiv(y,x);
 '''
 
-
+# x and y should be in the same cluster. 
 data = {'x':[1,2,3], 'y':[.5,1.5,2.5], 'z' : [4,8,6]};
 
-#print cluster.hierarchical(data, 2, cluster.singlelink);
+print cluster.hierarchical(data, 2, cluster.singlelink);
 
 print cluster.gonzalez(data, 2, distance.euclidean);
+
+print cluster.lloyds(data, 2, distance.euclidean);
 
