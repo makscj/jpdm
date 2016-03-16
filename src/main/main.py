@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import sys
 import random
 import itertools
@@ -38,9 +40,9 @@ import distance
 
 	# clusteringAlgorithmInfo = "gonzalez"
 	# distanceMeasurementInfo = "euclidean"
-	# configurationInfo = "explicitly configured, same columns used across datasets"
+	# vectorConfigurationInfo = "explicitly configured, same columns used across datasets, Indices used: [0,1,2,3]"
 
-	# writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, configurationInfo, cluster
+	# writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, clusters)
 
 ##############################################################
 ##############################################################
@@ -188,9 +190,9 @@ def experiment1(datasets, numClusters):
 	# Prepare to write experiment file
 	clusteringAlgorithmInfo = "gonzalez"
 	distanceMeasurementInfo = "euclidean"
-	configurationInfo = "explicitly configured, same columns used across datasets"
+	vectorConfigurationInfo = "explicitly configured, same columns used across datasets, Indices used: [0,1,2,3]"
 
-	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, configurationInfo, clusters)
+	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, clusters)
 
 
 

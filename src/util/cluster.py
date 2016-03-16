@@ -1,3 +1,6 @@
+#!/usr/bin/python
+
+
 import itertools
 import distance
 import random
