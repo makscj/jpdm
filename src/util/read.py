@@ -3,33 +3,34 @@ import dataset
 import sys, os
 
 class Read:
+   verbose = False
+   fileRange = []
+   skipFiles = []
+   dataSets = [] # List of dataset objects, each representing the data from one input file (corresponding to one set of excel data)
 
-   global verbose
-   global fileRange
-   global skipFiles
-   global dataSets # List of dataset objects, each representing the data from one input file (corresponding to one set of excel data)
 
-
-   def __init__(self):
+   def __init__(self, verbose):
       verbose = False
       dir = os.path.dirname(sys.argv[0])
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
-      fileRange = [1, len(os.listdir(listDirPath))];
-      skipFiles = []
-      dataSets = []
-      for i in range(fileRange[0], fileRange[1]+1):
-         if i in skipFiles:
+      self.fileRange = [1, len(os.listdir(listDirPath))];
+
+      for i in range(self.fileRange[0], self.fileRange[1]+1):
+         if i in self.skipFiles:
             continue
          
          # print "DIR", dir
          filePath =  os.path.join(dir, "../../data/FormattedDataFiles/T"+str(i)+".txt")
-         dataSets.append(self.readFile(filePath)) # Read and store data as Dataset object
-         for d in dataSets:
+         self.dataSets.append(self.readFile(filePath, i)) # Read and store data as Dataset object
+         
+
+      if verbose:
+         for d in self.dataSets:
             print "-----------------------TITLES:", d.getTitles()
             print d.toString(),"\n"
 
    
-   def readFile(self, filePath):
+   def readFile(self, filePath, datasetID):
       f = open(filePath,'r')
       title = ""
       subtitle = ""
@@ -72,7 +73,7 @@ class Read:
             dataVector = []
             for s in lineSplit:
                dataVector.append(self.parseNumber(s))
-            dataDictionary[labels[labelIndex]]=dataVector
+            dataDictionary["T"+str(datasetID)+"-"+labels[labelIndex]]=dataVector
             labelIndex+=1
             line = f.readline()
 

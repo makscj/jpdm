@@ -2,6 +2,7 @@ import itertools
 import distance
 import random
 
+
 '''
 data - the data to be clustered, represented as a {string=>list} dictionary
 k - The number of desired clusters

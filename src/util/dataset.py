@@ -27,6 +27,8 @@ class Dataset:
 	def getTitles(self):
 		return [self.title, self.subtitle];
 
+
+
 	# Argument: Integer, x, that will be used to randomly choose
 	# x columns to be activated.
 	def getRandomVectorsByDimensionality(self, dimensionality):
@@ -36,7 +38,7 @@ class Dataset:
 			while r in activeVectorsArray:
 				r = random.randint(0, dataMaxDimensionality-1)
 			activeVectorsArray.append(r)
-		return getVectorsByArray(activeVectorsArray)
+		return self.getVectorsByArray(activeVectorsArray)
 
 
 	# Argument: List of indices for activated columns
@@ -45,14 +47,20 @@ class Dataset:
 
 		modifiedDataDictionary = {}
 
-		for label in dataDictionary:
+		for label in self.dataDictionary:
 			newVector = []
-			for i in range(0, dataMaxDimensionality): # For each column...
+			for i in range(0, self.dataMaxDimensionality): # For each column...
 				if i in activeVectorsArray: # If active, add it to new vector
-					newVector.append(modifiedDataDictionary[label][i])
+					try:
+						newVector.append(self.dataDictionary[label][i])
+					except:
+						print "ERROR: Index out of range!"
 			modifiedDataDictionary[label] = newVector
 
+		# print modifiedDataDictionary
 		return modifiedDataDictionary
+
+
 
 
 	def toString(self, currentDictionary):
