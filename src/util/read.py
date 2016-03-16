@@ -80,6 +80,7 @@ class Read:
       if not (len(dataDictionary)==len(labels)):
          print "ERROR 1"
 
+      f.close()
       # Finally, make Dataset object
       return dataset.Dataset(title, subtitle, columnRange, dataDictionary)
 

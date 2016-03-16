@@ -1,5 +1,7 @@
 import sys
 import random
+import itertools
+import datetime
 sys.path.insert(0, '../util')
 import cluster
 import read
@@ -7,6 +9,41 @@ import dataset
 import normalize
 import distance
 
+
+
+##############################################################
+# Experiment Template
+##############################################################
+
+# def experiment1(datasets, numClusters):
+
+	###############---VECTOR CONFIGURATION---################
+
+	# < Put work here >
+
+
+	###############---VECTOR NORMALIZATION---################
+
+	# < Put work here >
+
+
+	###################---CLUSTERING---#####################
+
+	# < Put work here >
+
+
+	##################---STORE RESULTS---####################
+
+	# Prepare to write experiment file -- fill in the below values for this experiment.
+
+	# clusteringAlgorithmInfo = "gonzalez"
+	# distanceMeasurementInfo = "euclidean"
+	# configurationInfo = "explicitly configured, same columns used across datasets"
+
+	# writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, configurationInfo, cluster
+
+##############################################################
+##############################################################
 
 
 # Iterates through datasets, gets the largest possible dimensionality for 
@@ -90,16 +127,48 @@ def crunchDictionaryList(dictionaries):
 	return bigDictionary
 
 
-def experiment1(datasets):
+def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
 
-	##############---VECTOR CONFIGURATION---###############
+	now = datetime.datetime.now()
+	month = now.month
+	day = now.day
+	hour = now.hour
+	minute = now.minute
+
+	filename = '../../results/'+str(expIndex)+'_'+str(month)+'.'+str(day)+'_'+str(hour)+'.'+str(minute)
+	f = open(filename,'w')
+
+	f.write("CONFIGURATION DETAILS:\n\n")
+	f.write("Experiment index: "+str(expIndex)+"\n")
+	f.write("Number of clusters: "+str(numClusters)+"\n")
+	f.write("Clustering algorithm: "+clusteringAlgorithmInfo+"\n")
+	f.write("Distance measurement: "+distanceMeasurementInfo+"\n")
+	f.write("Vector configuration: "+vectorConfigurationInfo+"\n")
+
+	for i in range(0, numClusters):
+		# print "Cluster: ", i
+		f.write("\nCLUSTER "+str(i)+":\n\n")
+		for key, val in clusters.iteritems():
+			if val==i:
+				f.write("\t"+key)
+
+	f.close()
+
+
+
+
+def experiment1(datasets, numClusters):
+
+	###############---VECTOR CONFIGURATION---################
 
 	# Configure data, resulting in a list of dictionaries (labels-->vectors)
 	# There is a dictionary for each dataset, stored in the same order as in the datasets list
 	# dataDictionaries = randomlyConfigureActiveColumns(datasets, 5, True)
-	dataDictionaries = explicitlyConfigureActiveColumns(datasets, [0,1,2,3], True) # OR
+	# OR:
+	dataDictionaries = explicitlyConfigureActiveColumns(datasets, [0,1,2,3], True) 
 
-	##############---VECTOR NORMALIZATION---###############
+
+	###############---VECTOR NORMALIZATION---################
 
 	# At this point, have list of dictionaries. Each dictionary contains labels mapping to vectors.
 	# All of the vectors are the same dimensionality, build in the way that we specified for configuration.
@@ -109,15 +178,20 @@ def experiment1(datasets):
 		normalizedDictionaries.append(normalize.normalize(d)) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
 
-	##############---CLUSTERING---###############
-	numClusters = 3
+	###################---CLUSTERING---#####################
+
 	clusters = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
 
 
-	for i in range(0, numClusters):
-		for c in clusters:
-			if c[1]==i:
-				print c[0]
+	##################---STORE RESULTS---####################
+
+	# Prepare to write experiment file
+	clusteringAlgorithmInfo = "gonzalez"
+	distanceMeasurementInfo = "euclidean"
+	configurationInfo = "explicitly configured, same columns used across datasets"
+
+	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, configurationInfo, clusters)
+
 
 
 
@@ -127,6 +201,6 @@ if __name__ == "__main__":
 	reader = read.Read(False)
 	# Get data as list of dataset objects.
 	datasets = reader.getDataSets()
-	experiment1(datasets)
+	experiment1(datasets, 3)
 
 

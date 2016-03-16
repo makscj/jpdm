@@ -1,0 +1,166 @@
+{'T2-Table tennis\n': 0, 'T1-Fishing\n': 0, 'T3-Golf (including golf practice range)\n': 0, 'T6-Junior high school\n': 2, 'T1-Soccer (including futsal)\n': 0, 'T1-Cycling\n': 0, 'T1-Volleyball\n': 0, 'T2-Golf (including golf practice range)\n': 0, 'T3-Judo\n': 0, 'T1-Golf (including golf practice range)\n': 0, 'T1-Badminton\n': 0, 'T5-Graduate school\n': 2, 'T2-Basketball\n': 0, 'T3-Softball\n': 0, 'T6-College or university\n': 1, 'T3-Training with gym equipment\n': 1, 'T2-Badminton\n': 0, 'T1-Gate ball\n': 0, 'T2-Cycling\n': 0, 'T2-Fishing\n': 0, 'T6-Elementary school\n': 0, 'T1-Tennis\n': 0, 'T1-Kendo\n': 0, 'T2-Kendo\n': 0, 'T6-Junior college or technological college\n': 2, 'T1-Softball\n': 0, 'T3-Cycling\n': 0, 'T5-Elementary school\n': 0, 'T1-Judo\n': 0, 'T2-Soccer (including futsal)\n': 0, 'T4-Graduate school\n': 0, 'T1-Walking or light physical exercise\n': 1, 'T3-Table tennis\n': 0, 'T3-Jogging, marathon\n': 0, 'T2-Training with gym equipment\n': 2, 'T2-Volleyball\n': 0, 'T4-Junior college or technological college\n': 2, 'T5-High school\n': 2, 'T2-Gate ball\n': 0, 'T4-Junior high school\n': 2, 'T3-Swimming\n': 0, 'T1-Jogging, marathon\n': 0, 'T3-Gate ball\n': 0, 'T3-Volleyball\n': 0, 'T1-Baseball (including playing catch)\n': 0, 'T1-Skiing, snowboarding\n': 0, 'T2-Jogging, marathon\n': 0, 'T1-Training with gym equipment\n': 1, 'T5-Junior high school\n': 1, 'T1-Swimming\n': 0, 'T3-Fishing\n': 0, 'T1-Mountain climbing or hiking\n': 0, 'T6-Graduate school\n': 0, 'T6-High school\n': 1, 'T1-Table tennis\n': 0, 'T1-Basketball\n': 0, 'T2-Swimming\n': 0, 'T3-Basketball\n': 0, 'T4-High school\n': 1, 'T2-Softball\n': 0, 'T4-College or university\n': 1, 'T3-Mountain climbing or hiking\n': 0, 'T1-Bowling\n': 0, 'T2-Baseball (including playing catch)\n': 0, 'T3-Baseball (including playing catch)\n': 0, 'T2-Bowling\n': 0, 'T2-Mountain climbing or hiking\n': 0, 'T4-Elementary school\n': 0, 'T3-Tennis\n': 0, 'T3-Bowling\n': 0, 'T2-Tennis\n': 0, 'T2-Skiing, snowboarding\n': 0, 'T3-Soccer (including futsal)\n': 0, 'T3-Skiing, snowboarding\n': 0, 'T3-Badminton\n': 0, 'T3-Kendo\n': 0, 'T5-Junior college or technological college\n': 2, 'T5-College or university\n': 1, 'T2-Walking or light physical exercise\n': 2, 'T3-Walking or light physical exercise\n': 1, 'T2-Judo\n': 0}
+Cluster:  0
+Label: T2-Table tennis
+
+Label: T1-Fishing
+
+Label: T3-Golf (including golf practice range)
+
+Label: T1-Soccer (including futsal)
+
+Label: T1-Cycling
+
+Label: T1-Volleyball
+
+Label: T2-Golf (including golf practice range)
+
+Label: T3-Judo
+
+Label: T1-Golf (including golf practice range)
+
+Label: T1-Badminton
+
+Label: T2-Basketball
+
+Label: T3-Softball
+
+Label: T2-Badminton
+
+Label: T1-Gate ball
+
+Label: T2-Cycling
+
+Label: T2-Fishing
+
+Label: T6-Elementary school
+
+Label: T1-Tennis
+
+Label: T1-Kendo
+
+Label: T2-Kendo
+
+Label: T1-Softball
+
+Label: T3-Cycling
+
+Label: T5-Elementary school
+
+Label: T1-Judo
+
+Label: T2-Soccer (including futsal)
+
+Label: T4-Graduate school
+
+Label: T3-Table tennis
+
+Label: T3-Jogging, marathon
+
+Label: T2-Volleyball
+
+Label: T2-Gate ball
+
+Label: T3-Swimming
+
+Label: T1-Jogging, marathon
+
+Label: T3-Gate ball
+
+Label: T3-Volleyball
+
+Label: T1-Baseball (including playing catch)
+
+Label: T1-Skiing, snowboarding
+
+Label: T2-Jogging, marathon
+
+Label: T1-Swimming
+
+Label: T3-Fishing
+
+Label: T1-Mountain climbing or hiking
+
+Label: T6-Graduate school
+
+Label: T1-Table tennis
+
+Label: T1-Basketball
+
+Label: T2-Swimming
+
+Label: T3-Basketball
+
+Label: T2-Softball
+
+Label: T3-Mountain climbing or hiking
+
+Label: T1-Bowling
+
+Label: T2-Baseball (including playing catch)
+
+Label: T3-Baseball (including playing catch)
+
+Label: T2-Bowling
+
+Label: T2-Mountain climbing or hiking
+
+Label: T4-Elementary school
+
+Label: T3-Tennis
+
+Label: T3-Bowling
+
+Label: T2-Tennis
+
+Label: T2-Skiing, snowboarding
+
+Label: T3-Soccer (including futsal)
+
+Label: T3-Skiing, snowboarding
+
+Label: T3-Badminton
+
+Label: T3-Kendo
+
+Label: T2-Judo
+
+Cluster:  1
+Label: T6-College or university
+
+Label: T3-Training with gym equipment
+
+Label: T1-Walking or light physical exercise
+
+Label: T1-Training with gym equipment
+
+Label: T5-Junior high school
+
+Label: T6-High school
+
+Label: T4-High school
+
+Label: T4-College or university
+
+Label: T5-College or university
+
+Label: T3-Walking or light physical exercise
+
+Cluster:  2
+Label: T6-Junior high school
+
+Label: T5-Graduate school
+
+Label: T6-Junior college or technological college
+
+Label: T2-Training with gym equipment
+
+Label: T4-Junior college or technological college
+
+Label: T5-High school
+
+Label: T4-Junior high school
+
+Label: T5-Junior college or technological college
+
+Label: T2-Walking or light physical exercise
+
