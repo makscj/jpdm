@@ -73,7 +73,8 @@ dictionary, and every integer is the cluster it belongs to.
 '''
 def gonzalez(data, k, distance):
 	# Initialize every point to the first cluster
-	phi = {v[0]:0 for v in data.keys()};
+	phi = {v:0 for v in data.keys()};
+
 	# Create the list of cluster centers
 	c = [0 for v in range(k)];
 	# Arbitrarily choose the first cluster center
@@ -98,7 +99,7 @@ def gonzalez(data, k, distance):
 
 def lloyds(data, k, distance):
 	keys = data.keys();
-	phi = {v[0]:0 for v in keys};
+	phi = {v:0 for v in keys};
 	c = [[] for i in range(k)];
 	rando = random.sample(range(len(keys)), k);
 	hasNotChanged = lambda x,y: collections.Counter(x) == collections.Counter(y);
