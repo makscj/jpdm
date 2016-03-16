@@ -1,0 +1,97 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 1
+Number of clusters: 3
+Clustering algorithm: gonzalez
+Distance measurement: euclidean
+Vector configuration: explicitly configured, same columns used across datasets
+
+CLUSTER 0:
+
+	T6-Junior high school
+	T5-Graduate school
+	T6-Junior college or technological college
+	T4-Junior college or technological college
+	T5-High school
+	T4-Junior high school
+	T5-Junior college or technological college
+	T2-Walking or light physical exercise
+
+CLUSTER 1:
+
+	T2-Table tennis
+	T1-Fishing
+	T3-Golf (including golf practice range)
+	T1-Soccer (including futsal)
+	T1-Cycling
+	T1-Volleyball
+	T2-Golf (including golf practice range)
+	T3-Judo
+	T1-Golf (including golf practice range)
+	T1-Badminton
+	T2-Basketball
+	T3-Softball
+	T6-College or university
+	T3-Training with gym equipment
+	T2-Badminton
+	T1-Gate ball
+	T2-Cycling
+	T2-Fishing
+	T6-Elementary school
+	T1-Tennis
+	T1-Kendo
+	T2-Kendo
+	T1-Softball
+	T3-Cycling
+	T5-Elementary school
+	T1-Judo
+	T2-Soccer (including futsal)
+	T4-Graduate school
+	T3-Table tennis
+	T3-Jogging, marathon
+	T2-Volleyball
+	T2-Gate ball
+	T3-Swimming
+	T1-Jogging, marathon
+	T3-Gate ball
+	T3-Volleyball
+	T1-Baseball (including playing catch)
+	T1-Skiing, snowboarding
+	T2-Jogging, marathon
+	T5-Junior high school
+	T1-Swimming
+	T3-Fishing
+	T1-Mountain climbing or hiking
+	T6-Graduate school
+	T6-High school
+	T1-Table tennis
+	T1-Basketball
+	T2-Swimming
+	T3-Basketball
+	T4-High school
+	T2-Softball
+	T4-College or university
+	T3-Mountain climbing or hiking
+	T1-Bowling
+	T2-Baseball (including playing catch)
+	T3-Baseball (including playing catch)
+	T2-Bowling
+	T2-Mountain climbing or hiking
+	T4-Elementary school
+	T3-Tennis
+	T3-Bowling
+	T2-Tennis
+	T2-Skiing, snowboarding
+	T3-Soccer (including futsal)
+	T3-Skiing, snowboarding
+	T3-Badminton
+	T3-Kendo
+	T5-College or university
+	T3-Walking or light physical exercise
+	T2-Judo
+
+CLUSTER 2:
+
+	T1-Walking or light physical exercise
+	T2-Training with gym equipment
+	T1-Training with gym equipment
