@@ -17,23 +17,42 @@ import distance
 # Experiment Template
 ##############################################################
 
-# def experiment1(datasets, numClusters):
+# ------------------------------------------------------------
+# RUN EXPERIMENT FOR EVERY POSSIBLE N
+# ------------------------------------------------------------
 
+# def experiment1(datasets):
+
+# ------------------------------------------------------------
+# PART 1: CHOOSING DATA
+# ------------------------------------------------------------
 	###############---VECTOR CONFIGURATION---################
 
-	# < Put work here >
+	# < Put work here -- this is where we choose columns>
 
+	###############---REDUCTION WITH REGRESSION---################
+
+	# < Put work here -- if desired, use regression to reduce dimensionality/columns to uniform k>
+
+# ------------------------------------------------------------
+# PART 2: NORMALIZATION AND CHOOSING DISTANCE MEASURE 
+# ------------------------------------------------------------
 
 	###############---VECTOR NORMALIZATION---################
 
 	# < Put work here >
 
+# ------------------------------------------------------------
+# PART 3: RUN
+# ------------------------------------------------------------
 
 	###################---CLUSTERING---#####################
 
 	# < Put work here >
 
-
+# ------------------------------------------------------------
+# PART 4: WRITE RESULTS 
+# ------------------------------------------------------------
 	##################---STORE RESULTS---####################
 
 	# Prepare to write experiment file -- fill in the below values for this experiment.
@@ -43,6 +62,7 @@ import distance
 	# vectorConfigurationInfo = "explicitly configured, same columns used across datasets, Indices used: [0,1,2,3]"
 
 	# writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, clusters)
+
 
 ##############################################################
 ##############################################################
