@@ -71,7 +71,7 @@ class Read:
          line = f.readline()
          while not line == "":
             line = line.strip()
-            lineSplit = line.split("\t")
+            lineSplit = line.split() # Split on white space
             dataVector = []
             for s in lineSplit:
                dataVector.append(self.parseNumber(s))
