@@ -62,7 +62,7 @@ def hierarchical(data, k, link):
 			phi[val] = cval;
 		cval += 1;
 
-	return phi;
+	return (clusters,phi);
 
 '''
 Method that runs the Gonzalez greedy algorithm for k-Center Clustering.
@@ -97,7 +97,7 @@ def gonzalez(data, k, distance):
 		for key,val in data.iteritems():
 			if distance(val,c[phi[key]]) > distance(val, c[i]):
 				phi[key] = i;
-	return phi;
+	return (c, phi);
 
 
 def lloyds(data, k, distance):
@@ -132,7 +132,7 @@ def lloyds(data, k, distance):
 			for dim in range(len(avg)):
 				avg[dim] /= count;
 			c[i] = avg;
-	return phi
+	return (c,phi)
 
 def singlelink(set1, set2, data):
 	# Create a list of lists for each list in data corresponding to set 1
@@ -187,8 +187,23 @@ def meanlink(set1, set2, data):
 	return distance.euclidean(s1,s2);
 
 
+def centerCost(data, centers, phi, distance):
+	Max = 0;
+	for key,point in data.iteritems():
+		dis = distance(centers[phi[key]], point);
+		if dis > Max:
+			Max = dis;
+	return Max;
 
+def meanCost(data, centers, phi, distance):
+	cost = 0.0;
+	count = 0;
+	for key,point in data.iteritems():
+		dis = distance(centers[phi[key]], point);
+		cost += distance**2;
+		count += 1;
 
+	return sqrt(cost/count);
 
 
 
