@@ -165,6 +165,7 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 	f.write("Number of clusters: "+str(numClusters)+"\n\n")
 	f.write("Clustering algorithm: "+clusteringAlgorithmInfo+"\n")
 	f.write("Distance measurement: "+distanceMeasurementInfo+"\n")
+	print vectorConfigurationInfo
 	f.write("Vector configuration: "+vectorConfigurationInfo+"\n")
 	f.write("Notes: "+otherNotes+"\n")
 
@@ -236,7 +237,8 @@ def experiment2(datasets, numClusters, dimensionality):
 	normalizedDictionaries = []
 	for d in datasets:
 		# print d, "\n"
-		normalizedDictionaries.append(normalize.normalize(d)) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
+		# print d
+		normalizedDictionaries.append(normalize.normalize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
 	# ------------------------------------------------------------
 	# PART 3: RUN
@@ -254,7 +256,7 @@ def experiment2(datasets, numClusters, dimensionality):
 
 	clusteringAlgorithmInfo = "gonzalez"
 	distanceMeasurementInfo = "euclidean"
-	vectorConfigurationInfo = "configured using regression, reduced to dimensionality:", dimensionality
+	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
 	writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
 
 

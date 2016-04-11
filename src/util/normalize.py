@@ -23,6 +23,7 @@ def normalize(someDict):
 		minNum = float(min(lst))
 		maxNum = float(max(lst))
 		temp = []
+		#print lst
 		for val in lst:
 			temp.append((val - minNum) / maxNum)
 		newDict[str(value)]	= temp

@@ -113,7 +113,7 @@ def gonzalez(data, k, distance):
 			if(dist > Max):
 				Max = dist;
 				c[i] = val;
-		print c[i]
+		#print c[i]
 		# Find the closest cluster center to each point
 		for key,val in data.iteritems():
 			if distance(val,c[phi[key]]) > distance(val, c[i]):

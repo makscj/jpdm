@@ -20,11 +20,19 @@ def svd(matrix):
 	
 	U,s,V = np.linalg.svd(matrix, full_matrices=True);
 
+	#print s
+
 	rows = matrix.shape[0];
 	cols = matrix.shape[1];
 
+	#print "{} rows and {} cols".format(rows, cols);
+
 	S = np.zeros((rows, cols));
-	S[:cols, :cols] = np.diag(s);
+
+	val = min(rows, cols)
+	# val = cols;
+
+	S[:val, :val] = np.diag(s);
 
 	return (U, S, V);
 
@@ -72,7 +80,9 @@ def mapToPlane(Uk, Sk, Vk):
 # k dimensions.
 def getLowerSpace(data, k):
 	(keys, matrix) = createMatrix(data);
+
 	(U, S, V) = svd(matrix);
+
 	(Uk, Sk, Vk) = subsvd(U, S, V, k); #
 	lower = mapToLowerSpace(matrix, Vk);
 	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
