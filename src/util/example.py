@@ -41,6 +41,8 @@ for ls in raw:
 #print "--------"
 (hi_c,hi_p) = cluster.hierarchical(data, 3, cluster.completelink);
 
+print hi_c;
+
 kprint(keys, n_gonz_p);
 kprint(keys, n_ll_p);
 kprint(keys, hi_p);
