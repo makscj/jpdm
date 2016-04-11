@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+##########################################################################
+# This is code for running test data, to make sure our model works.
+##########################################################################
+
 import distance
 import cluster
 import regression
