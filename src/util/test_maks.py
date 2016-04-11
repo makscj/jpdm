@@ -86,3 +86,14 @@ print p
 (c,p) = cluster.lloyds(data2d, 2, distance.euclidean);
 
 print p
+
+print "-----------"
+print "-----------"
+
+(k,A) = regression.createMatrix(data);
+
+print regression.svd(A);
+print "!!!!!!!!!!!!!!!"
+print regression.pca(A);
+
+

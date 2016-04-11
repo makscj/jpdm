@@ -12,6 +12,16 @@ def svd(matrix):
 
 	return (U, S, V);
 
+def pca(matrix):
+	rows = matrix.shape[0];
+
+	eye = np.identity(rows);
+	one = np.ones((rows,rows));
+	C = eye - (1.0/rows)*one;
+
+	nu_matrix = C*matrix;
+	return svd(nu_matrix);
+
 def subsvd(U, S, V, k):
 
 	Uk = U[:,0:k];
