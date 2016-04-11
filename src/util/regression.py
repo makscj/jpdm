@@ -1,5 +1,21 @@
 import numpy as np
 
+##########################################################################
+# Use getLowerSpace(data, K) or getReducedSpace(data, K)
+# K is desired dimensionality
+# data is dictionary label-->vector
+#
+# getLowerSpace(data, K) 
+# This is a transformation to lower space. The input data is translated to
+# k dimensions.
+# 
+# getReducedSpace(data, K)
+# Useful for casting high dimensional data to lower dimensions, in order to
+# represent the data in a lower space. Will be useful for being able to 
+# visualize high dimensional data in 2D or 3D space. (Doesn't actually
+# change the nature of the data--this is a projection onto lower space)
+##########################################################################
+
 def svd(matrix):
 	
 	U,s,V = np.linalg.svd(matrix, full_matrices=True);
@@ -52,15 +68,19 @@ def mapToLowerSpace(matrix, Vk):
 def mapToPlane(Uk, Sk, Vk):
 	return Uk*Sk*np.transpose(Vk);
 
-
+# This is a transformation to lower space. The input data is translated to
+# k dimensions.
 def getLowerSpace(data, k):
 	(keys, matrix) = createMatrix(data);
 	(U, S, V) = svd(matrix);
-	(Uk, Sk, Vk) = subsvd(U, S, V, k);
+	(Uk, Sk, Vk) = subsvd(U, S, V, k); #
 	lower = mapToLowerSpace(matrix, Vk);
 	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
 
-
+# Useful for casting high dimensional data to lower dimensions, in order to
+# represent the data in a lower space. Will be useful for being able to 
+# visualize high dimensional data in 2D or 3D space. (Doesn't actually
+# change the nature of the data--this is a projection onto lower space)
 def getReducedSpace(data, k):
 	(keys, matrix) = createMatrix(data);
 	(U, S, V) = svd(matrix);

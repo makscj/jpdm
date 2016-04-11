@@ -1,6 +1,18 @@
 
 #!/usr/bin/python
 
+##########################################################################
+# Distance measure functions (each takes two vectors, to measure 
+# the distance between them).
+# -Euclidean
+# -Manhattan
+# -Jaccard
+# -Cosine
+# -kl divergence (Note: not a metric)
+# -Infinity norm
+# -Plus any other kind of n-Norm
+##########################################################################
+
 import math
 
 '''

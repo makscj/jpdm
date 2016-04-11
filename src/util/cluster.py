@@ -1,5 +1,25 @@
 #!/usr/bin/python
 
+##########################################################################
+# This file contains ALL of our clustering algorithmsa and cost functions
+#
+# Clustering algorithms:
+#	-Gonazalez (K-center)
+#	-Lloyds (K-means) 
+#	-Hierarchical (single link, complete link and mean link)
+# Cost functions:
+#	-Center cost
+#	-Mean cost
+#
+# How to use these (high level):
+# Clustering: Call them, and provide distance measure argument (where 
+#	applicable)
+# Cost functions: Take data, centers, phi, and distance and return cost. 
+# 	(so, call AFTER you've done all clustering)
+#
+# Note: For experimentation, may not use hierarchical often--we don't have 
+# a cost function for it.
+##########################################################################
 
 import itertools
 import distance

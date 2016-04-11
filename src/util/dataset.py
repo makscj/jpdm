@@ -2,6 +2,12 @@
 
 import random 
 
+##########################################################################
+# This is the dataset object which is used to encapsulate a given data file.
+# Each dataset corresponds to one data file.
+# Data is represented in dictionary:	Label --> Data vector (row)
+##########################################################################
+
 class Dataset:
 	
 	title = ""
@@ -9,6 +15,8 @@ class Dataset:
 	excelColumnRange = ""
 	dataMaxDimensionality = 0
 	dataDictionary = {}
+	reducedDataDictionary = {}
+	reducedDimensionality = 0
 
 	def __init__(self, title, subtitle, columnRange, dataDictionary):
 		self.title = title;
@@ -22,13 +30,24 @@ class Dataset:
 
 	# Return dictionary -- labels (strings) mapping to vectors (double arrays)
 	def getVectors(self):
-		return self.dataDictionary;
+		return self.dataDictionary
 
 	# Returns the title and subtitle for this dataset
 	def getTitles(self):
-		return [self.title, self.subtitle];
+		return [self.title, self.subtitle]
 
+	##################################################################
+	# FOR STORING/SETTING CURRENT "REDUCED" VERSION OF THIS DATASET
+	def setReducedDictionary(self, newDictionary, kDimensionality):
+		self.reducedDataDictionary = newDictionary
+		self.reducedDimensionality = kDimensionality
 
+	def getReducedDimensionality(self):
+		return self.reducedDimensionality
+
+	def getReducedVectors(self):
+		return self.reducedDataDictionary
+	##################################################################
 
 	# Argument: Integer, x, that will be used to randomly choose
 	# x columns to be activated.
@@ -60,7 +79,6 @@ class Dataset:
 
 		# print modifiedDataDictionary
 		return modifiedDataDictionary
-
 
 
 

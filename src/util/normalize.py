@@ -1,5 +1,15 @@
 #!/usr/bin/python
 
+
+##########################################################################
+# Normalization functions
+# -normalize: Subtract min from each element of vector, then divide by max. [0,1]
+# -normalizeMinMax: Subtract min from each element of vector, then divide by max-min. [0,1]
+# -normalizeStandardize: Subtract mean from each element of vector, then divide by variance. [-2, 2]
+# -normalizeDecimal: ?? [0,1]
+##########################################################################
+
+
 import math
 
 '''
@@ -69,6 +79,8 @@ def normalizeDecimal(someDict):
 				temp.append(val * math.pow(10,k))	
 		newDict[str(value)] = temp
 	return newDict
+
+
 
 ########### HELPERS ##############
 

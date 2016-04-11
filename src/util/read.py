@@ -1,6 +1,12 @@
 #!/usr/bin/python
 
 # from dataset import Dataset
+
+##########################################################################
+# Function for reading data files.
+# Builds a list of dataset objects from the input files that are read.
+##########################################################################
+
 import dataset
 import sys, os
 
@@ -15,9 +21,12 @@ class Read:
       verbose = False
       dir = os.path.dirname(sys.argv[0])
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
-      self.fileRange = [1, len(os.listdir(listDirPath))];
+      nFiles = len(os.listdir(listDirPath))
+      print nFiles
+      self.fileRange = [1, nFiles];
 
-      for i in range(self.fileRange[0], self.fileRange[1]+1):
+      for i in range(self.fileRange[0], self.fileRange[1]):
+         # print "READING...", i
          if i in self.skipFiles:
             continue
          
@@ -33,6 +42,7 @@ class Read:
 
    
    def readFile(self, filePath, datasetID):
+      # print "IN READ FUNCTION", datasetID
       f = open(filePath,'r')
       title = ""
       subtitle = ""
@@ -69,13 +79,16 @@ class Read:
 
       if "<DATA>" in line:
          line = f.readline()
-         while not line == "":
+         while not (line == "" or line=="\n"):
             line = line.strip()
             lineSplit = line.split() # Split on white space
             dataVector = []
             for s in lineSplit:
                dataVector.append(self.parseNumber(s))
-            dataDictionary["T"+str(datasetID)+"-"+labels[labelIndex]]=dataVector
+            # print "DATASET ID", datasetID
+            # print "LABEL INDEX", labelIndex
+            L=labels[labelIndex]
+            dataDictionary["T"+str(datasetID)+"-"+L]=dataVector
             labelIndex+=1
             line = f.readline()
 
@@ -84,6 +97,7 @@ class Read:
 
       f.close()
       # Finally, make Dataset object
+      # print "LEAVING READ FUNCTION"
       return dataset.Dataset(title, subtitle, columnRange, dataDictionary)
 
 
