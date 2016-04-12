@@ -23,7 +23,7 @@ class Read:
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
       nFiles = len(os.listdir(listDirPath))
       print nFiles
-      self.fileRange = [1, nFiles];
+      self.fileRange = [0, nFiles];
 
       for i in range(self.fileRange[0], self.fileRange[1]):
          # print "READING...", i
