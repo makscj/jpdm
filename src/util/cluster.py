@@ -118,7 +118,7 @@ def gonzalez(data, k, distance):
 		for key,val in data.iteritems():
 			if distance(val,c[phi[key]]) > distance(val, c[i]):
 				phi[key] = i;
-	return (c, phi);
+	return (c, phi); # List of centers, dictionary of phis ==> Labels mapped to center index
 
 
 def lloyds(data, k, distance):
@@ -208,6 +208,13 @@ def meanlink(set1, set2, data):
 	return distance.euclidean(s1,s2);
 
 
+#---------------------------------------------------------------------------
+# Can calculate center and mean cost when using gonzalez and lloyds
+#--------------------------------------------------------------------------
+
+# Takes data dictionary
+# Takes centers of clusters and phi
+# Distance measure
 def centerCost(data, centers, phi, distance):
 	Max = 0;
 	for key,point in data.iteritems():
@@ -216,6 +223,10 @@ def centerCost(data, centers, phi, distance):
 			Max = dis;
 	return Max;
 
+
+# Takes data dictionary
+# Takes centers of clusters and phi
+# Distance measure
 def meanCost(data, centers, phi, distance):
 	cost = 0.0;
 	count = 0;
