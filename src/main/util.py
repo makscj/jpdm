@@ -100,6 +100,7 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 	day = now.day
 	hour = now.hour
 	minute = now.minute
+	second = now.second
 
 	filename = '../../results/exp'+str(expIndex)+"/"+str(expIndex)+'_'+str(day)+'_'+str(hour)+'.'+str(minute)+'.'+str(second)+'_K.'+str(numClusters)
 	f = open(filename,'w')

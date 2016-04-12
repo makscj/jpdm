@@ -58,7 +58,7 @@ def experiment1(datasets, numClusters):
 	# There is a dictionary for each dataset, stored in the same order as in the datasets list
 	# dataDictionaries = randomlyConfigureActiveColumns(datasets, 5, True)
 	# OR:
-	dataDictionaries = explicitlyConfigureActiveColumns(datasets, [0,1,2,3], True) 
+	dataDictionaries = util.explicitlyConfigureActiveColumns(datasets, [0,1,2,3], True) 
 
 	###############---VECTOR NORMALIZATION---################
 
@@ -70,7 +70,7 @@ def experiment1(datasets, numClusters):
 		normalizedDictionaries.append(normalize.normalize(d)) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
 	###################---CLUSTERING---#####################
-	clusterResults = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+	clusterResults = cluster.gonzalez(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
 
 	##################---STORE RESULTS---####################
 
@@ -79,7 +79,7 @@ def experiment1(datasets, numClusters):
 	distanceMeasurementInfo = "euclidean"
 	vectorConfigurationInfo = "explicitly configured, same columns used across datasets, Indices used: [0,1,2,3]"
 
-	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo,"", clusterResults[1])
+	util.writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo,"", clusterResults[1])
 
 
 
@@ -114,7 +114,7 @@ def experiment2(datasets, numClusters, dimensionality):
 	# ------------------------------------------------------------
 
 	###################---CLUSTERING---#####################
-	clusterResults  = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+	clusterResults  = cluster.gonzalez(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
 
 	# ------------------------------------------------------------
 	# PART 4: WRITE RESULTS 
@@ -126,7 +126,7 @@ def experiment2(datasets, numClusters, dimensionality):
 	clusteringAlgorithmInfo = "gonzalez"
 	distanceMeasurementInfo = "euclidean"
 	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
-	writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
+	util.writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
 
 
 # Automatically generates results for every N
@@ -161,7 +161,7 @@ def experiment3(datasets, numClusters):
 	# PART 3: RUN
 	# ------------------------------------------------------------
 	###################---CLUSTERING---#####################
-	clusterResults  = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+	clusterResults  = cluster.gonzalez(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
 
 	# ------------------------------------------------------------
 	# PART 4: WRITE RESULTS 
@@ -173,7 +173,7 @@ def experiment3(datasets, numClusters):
 	clusteringAlgorithmInfo = "gonzalez"
 	distanceMeasurementInfo = "euclidean"
 	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
-	writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
+	util.writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
 
 
 
@@ -187,11 +187,11 @@ if __name__ == "__main__":
 	#-----------------------------------
 
 	copy1 = list(datasets) # This is where you choose which tables you're using
-	# copy1.pop(0)
+	copy1.pop(0)
 	experiment1(copy1, 3) # This is where you choose which tables you're using
 
 	copy2 = list(datasets) # This is where you choose which tables you're using
-	# copy2.pop(0)
+	copy2.pop(0)
 	experiment2([copy2[2]], 3, 2) # This is where you choose which tables you're using
 
 
