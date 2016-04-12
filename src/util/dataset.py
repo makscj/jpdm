@@ -96,6 +96,11 @@ class Dataset:
 			s+= "("+label+": "+str(self.dataDictionary[label])+")\n"
 		s+="}"
 		return s
+
+	# Returns the number of rows
+	def getNumPoints(self):
+		return len(self.dataDictionary)
+
 	
 
 

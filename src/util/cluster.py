@@ -24,6 +24,7 @@
 import itertools
 import distance
 import random
+import math
 
 
 '''
@@ -232,10 +233,10 @@ def meanCost(data, centers, phi, distance):
 	count = 0;
 	for key,point in data.iteritems():
 		dis = distance(centers[phi[key]], point);
-		cost += distance**2;
+		cost += dis**2;
 		count += 1;
 
-	return sqrt(cost/count);
+	return math.sqrt(cost/count);
 
 
 
