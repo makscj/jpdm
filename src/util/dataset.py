@@ -15,6 +15,7 @@ class Dataset:
 	excelColumnRange = ""
 	dataMaxDimensionality = 0
 	dataDictionary = {}
+	
 	reducedDataDictionary = {}
 	reducedDimensionality = 0
 
