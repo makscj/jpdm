@@ -19,14 +19,24 @@ This will put all the coordinates in the [0,1] range
 def normalize(someDict):
 	newDict = {}
 	for value in someDict:
-		lst = someDict[str(value)]
+		newDict[value] = []
+
+	for i in range(len(someDict.values()[0])):
+		lst = []
+		for value in someDict:
+			lst.append(someDict[str(value)][i])
+
 		minNum = float(min(lst))
-		maxNum = float(max(lst))
+	 	maxNum = float(max(lst))
+
 		temp = []
-		#print lst
 		for val in lst:
 			temp.append((val - minNum) / maxNum)
-		newDict[str(value)]	= temp
+
+		# for value in someDict:
+		for index in range(len(temp)):
+			newDict[newDict.keys()[index]].append(temp[index])
+
 	return newDict
 
 '''
@@ -36,13 +46,27 @@ This will put all the coordinates in the [0,1] range
 def normalizeMinMax(someDict):
 	newDict = {}
 	for value in someDict:
-		lst = someDict[str(value)]
+		newDict[value] = []
+
+	for i in range(len(someDict.values()[0])):
+		lst = []
+		for value in someDict:
+			lst.append(someDict[str(value)][i])
+
 		minNum = float(min(lst))
-		maxNum = float(max(lst))
-		temp = []		
+	 	maxNum = float(max(lst))
+
+		temp = []
 		for val in lst:
-			temp.append((val - minNum) / (maxNum - minNum))
-		newDict[str(value)]	= temp			
+			if maxNum == minNum:
+				temp.append(0.0)
+			else:
+				temp.append((val - minNum) / (maxNum - minNum))
+
+		# for value in someDict:
+		for index in range(len(temp)):
+			newDict[newDict.keys()[index]].append(temp[index])
+
 	return newDict
 
 '''
@@ -50,27 +74,48 @@ def normalizeMinMax(someDict):
 # This will put all the coordinates in the [-2,2] range
 '''
 def normalizeStandardize(someDict):
-	newDict = {}	
+	newDict = {}
 	for value in someDict:
-		lst = someDict[str(value)]
+		newDict[value] = []
+
+	for i in range(len(someDict.values()[0])):
+		lst = []
+		for value in someDict:
+			lst.append(someDict[str(value)][i])
+
 		minNum = float(min(lst))
-		maxNum = float(max(lst))
+	 	maxNum = float(max(lst))
+
 		var = variance(lst)
 		mu = mean(lst)
 		temp = []
 		for val in lst:
-			temp.append((val - mu) / math.sqrt(var))
-		newDict[str(value)] = temp	
+			if math.sqrt(var) == 0:
+				temp.append(0)
+			else:
+				temp.append((val - mu) / math.sqrt(var))
+
+		# for value in someDict:
+		for index in range(len(temp)):
+			newDict[newDict.keys()[index]].append(temp[index])
+
 	return newDict
 
 '''
 Normalizing  by moving the decimal point of values of feature X
 This will put all the coordinates in the [0,1] range
+{x=[1,2],y=[3,4]}
 '''
 def normalizeDecimal(someDict):
-	newDict = {}	
-	for index , value in enumerate(someDict):
-		lst = someDict[str(value)]
+	newDict = {}
+	for value in someDict:
+		newDict[value] = []
+
+	for i in range(len(someDict.values()[0])):
+		lst = []
+		for value in someDict:
+			lst.append(someDict[str(value)][i])
+
 		k = max(math.ceil(math.log(max(lst),10)),math.ceil(math.log(min(lst),10)))
 		temp = []
 		for i, val in enumerate(lst):
@@ -78,7 +123,11 @@ def normalizeDecimal(someDict):
 				temp.append(val/math.pow(10,k))
 			else:
 				temp.append(val * math.pow(10,k))	
-		newDict[str(value)] = temp
+
+		# for value in someDict:
+		for index in range(len(temp)):
+			newDict[newDict.keys()[index]].append(temp[index])
+
 	return newDict
 
 

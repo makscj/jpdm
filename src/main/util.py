@@ -92,6 +92,25 @@ def crunchDictionaryList(dictionaries):
 			bigDictionary[i[0]] = i[1]
 	return bigDictionary
 
+# All parameters are lists.
+def writeCostFile(expIndex, maxClusters, centerCosts, meanCosts, clusterFileNames):
+
+	if not (len(centerCosts)==len(meanCosts) and len(centerCosts)==len(clusterFileNames)):
+		print "PROBLEM--NUMBER OF COSTS DOESNT MATCH NUMBER OF CLUSTER EXPERIMENTS."
+
+	f = open('../../results/exp'+str(expIndex)+"/"+clusterFileNames[0]+"_CDF_POINTS",'w')
+	f.write("CDF POINTS\n\n")
+	f.write("CENTER COST POINTS (N, cost):\n")
+	for c in range(1, maxClusters+1):
+		f.write(str(c)+"\t"+str(centerCosts[c-1])+"\n")
+	f.write("\nMEAN COST POINTS (N, cost):\n")
+	for c in range(1, maxClusters+1):
+		f.write(str(c)+"\t"+str(meanCosts[c-1])+"\n")
+	f.write("\nCORRESPONDING CLUSTER FILES:\n")
+	for name in clusterFileNames:
+		f.write(name+"\n")
+	f.close()
+
 
 def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, otherNotes, clusters):
 
@@ -102,8 +121,8 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 	minute = now.minute
 	second = now.second
 
-	filename = '../../results/exp'+str(expIndex)+"/"+str(expIndex)+'_'+str(day)+'_'+str(hour)+'.'+str(minute)+'.'+str(second)+'_K.'+str(numClusters)
-	f = open(filename,'w')
+	filename = str(expIndex)+'_'+str(day)+'_'+str(hour)+'.'+str(minute)+'.'+str(second)+'_K.'+str(numClusters)
+	f = open('../../results/exp'+str(expIndex)+"/"+filename,'w')
 
 	f.write("CONFIGURATION DETAILS:\n\n")
 	f.write("Experiment index: "+str(expIndex)+"\n")
@@ -122,5 +141,7 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 				f.write("\t"+key)
 
 	f.close()
+
+	return filename
 
 
