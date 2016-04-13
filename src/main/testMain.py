@@ -231,6 +231,6 @@ if __name__ == "__main__":
 	# experiment1(copy1, 3) # This is where you choose which tables you're using
 
 	copy2 = list(datasets) # This is where you choose which tables you're using
-	experiment3([copy2[0]], -1) # This is where you choose which tables you're using
+	experiment3([copy2[18]], -1) # This is where you choose which tables you're using
 
 

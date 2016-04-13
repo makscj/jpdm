@@ -22,7 +22,7 @@ class Read:
       dir = os.path.dirname(sys.argv[0])
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
       nFiles = len(os.listdir(listDirPath))
-      print nFiles
+      # print nFiles
       self.fileRange = [0, nFiles];
 
       for i in range(self.fileRange[0], self.fileRange[1]):
@@ -116,7 +116,7 @@ class Read:
          for s in range(0, len(dataVector)):
             if dataVector[s]==float('inf'):
                dataVector[s]=dataVectorAverages[s]
-         print "VECTOR:",dataVector
+         # print "VECTOR:",dataVector
 
 
 
