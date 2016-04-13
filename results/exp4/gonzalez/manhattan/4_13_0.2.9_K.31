@@ -1,0 +1,149 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 31
+
+Clustering algorithm: gonzalez
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 6
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T25-kyoto-fu
+	T25-hyogo-ken
+
+CLUSTER 1:
+
+	T25-yamanashi-ken
+	T25-nagano-ken
+
+CLUSTER 2:
+
+	T25-aomori-ken
+
+CLUSTER 3:
+
+	T25-tokyo-to
+
+CLUSTER 4:
+
+	T25-niigata-ken
+	T25-kochi-ken
+
+CLUSTER 5:
+
+	T25-osaka-fu
+
+CLUSTER 6:
+
+	T25-yamaguchi-ken
+	T25-oita-ken
+
+CLUSTER 7:
+
+	T25-tottori-ken
+
+CLUSTER 8:
+
+	T25-okinawa-ken
+
+CLUSTER 9:
+
+	T25-gifu-ken
+	T25-fukui-ken
+
+CLUSTER 10:
+
+	T25-hokkaido
+
+CLUSTER 11:
+
+	T25-kanagawa-ken
+
+CLUSTER 12:
+
+	T25-shiga-ken
+
+CLUSTER 13:
+
+	T25-nara-ken
+
+CLUSTER 14:
+
+	T25-fukuoka-ken
+
+CLUSTER 15:
+
+	T25-iwate-ken
+
+CLUSTER 16:
+
+	T25-mie-ken
+	T25-kagawa-ken
+	T25-tochigi-ken
+
+CLUSTER 17:
+
+	T25-fukushima-ken
+	T25-chiba-ken
+
+CLUSTER 18:
+
+	T25-miyazaki-ken
+	T25-akita-ken
+	T25-kagoshima-ken
+	T25-nagasaki-ken
+	T25-kumamoto-ken
+
+CLUSTER 19:
+
+	T25-saga-ken
+	T25-shizuoka-ken
+
+CLUSTER 20:
+
+	T25-ishikawa-ken
+	T25-gumma-ken
+	T25-wakayama-ken
+
+CLUSTER 21:
+
+	T25-okayama-ken
+
+CLUSTER 22:
+
+	T25-ibaraki-ken
+
+CLUSTER 23:
+
+	T25-hiroshima-ken
+
+CLUSTER 24:
+
+	T25-toyama-ken
+	T25-yamagata-ken
+
+CLUSTER 25:
+
+	T25-tokushima-ken
+
+CLUSTER 26:
+
+	T25-ehime-ken
+
+CLUSTER 27:
+
+	T25-aichi-ken
+
+CLUSTER 28:
+
+	T25-saitama-ken
+
+CLUSTER 29:
+
+	T25-shimane-ken
+
+CLUSTER 30:
+
+	T25-miyagi-ken

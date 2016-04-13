@@ -1,0 +1,107 @@
+CONFIGURATION DETAILS:
+
+Experiment index: Christopher
+Number of clusters: 17
+
+Clustering algorithm: gonzalez
+Distance measurement: infNorm
+Vector configuration: configured using regression, reduced to dimensionality:, 71
+Notes: Using All columns, using euclidean distatnce for the center costs and mean costs, regression being used is SVD
+
+CLUSTER 0:
+
+	T20-saga
+	T20-miyazaki
+
+CLUSTER 1:
+
+	T20-shiga
+	T20-tottori
+	T20-yamagata
+	T20-gifu
+	T20-mie
+	T20-yamanashi
+	T20-shizuoka
+	T20-kagawa
+	T20-iwate
+	T20-okayama
+
+CLUSTER 2:
+
+	T20-tokyo
+
+CLUSTER 3:
+
+	T20-hokkaido
+
+CLUSTER 4:
+
+	T20-nagano
+	T20-tokushima
+	T20-fukuoka
+	T20-okinawa
+
+CLUSTER 5:
+
+	T20-ibaraki
+
+CLUSTER 6:
+
+	T20-kanagawa
+	T20-ishikawa
+	T20-hyogo
+
+CLUSTER 7:
+
+	T20-aomori
+
+CLUSTER 8:
+
+	T20-akita
+	T20-tochigi
+	T20-chiba
+	T20-hiroshima
+
+CLUSTER 9:
+
+	T20-toyama
+	T20-fukushima
+	T20-niigata
+
+CLUSTER 10:
+
+	T20-oita
+
+CLUSTER 11:
+
+	T20-miyagi
+	T20-saitama
+	T20-nagasaki
+	T20-yamaguchi
+	T20-ehime
+
+CLUSTER 12:
+
+	T20-nara
+
+CLUSTER 13:
+
+	T20-kochi
+
+CLUSTER 14:
+
+	T20-kagoshima
+	T20-kumamoto
+	T20-kyoto
+
+CLUSTER 15:
+
+	T20-shimane
+	T20-wakayama
+
+CLUSTER 16:
+
+	T20-gumma
+	T20-aichi
+	T20-osaka
+	T20-fukui

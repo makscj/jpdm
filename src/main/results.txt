@@ -1,47 +1,101 @@
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
-configured using regression, reduced to dimensionality:, 66
+['T0.txt', 'T1.txt', 'T10.txt', 'T11.txt', 'T12.txt', 'T13.txt', 'T14.txt', 'T15.txt', 'T16.txt', 'T17.txt', 'T18.txt', 'T19.txt', 'T2.txt', 'T20.txt', 'T21.txt', 'T22.txt', 'T23.txt', 'T24.txt', 'T25.txt', 'T26.txt', 'T27.txt', 'T28.txt', 'T29.txt', 'T3.txt', 'T30.txt', 'T31.txt', 'T32.txt', 'T4.txt', 'T5.txt', 'T6.txt', 'T7.txt', 'T8.txt', 'T9.txt']
+['T0.txt', 'T1.txt', 'T10.txt', 'T11.txt', 'T12.txt', 'T13.txt', 'T14.txt', 'T15.txt', 'T16.txt', 'T17.txt', 'T18.txt', 'T19.txt', 'T2.txt', 'T20.txt', 'T21.txt', 'T22.txt', 'T23.txt', 'T24.txt', 'T25.txt', 'T26.txt', 'T27.txt', 'T28.txt', 'T29.txt', 'T3.txt', 'T30.txt', 'T31.txt', 'T32.txt', 'T4.txt', 'T5.txt', 'T6.txt', 'T7.txt', 'T8.txt', 'T9.txt']
+LABEL INDEX 0
+LABEL INDEX 1
+LABEL INDEX 2
+LABEL INDEX 3
+LABEL INDEX 4
+LABEL INDEX 5
+LABEL INDEX 6
+LABEL INDEX 7
+LABEL INDEX 8
+LABEL INDEX 9
+LABEL INDEX 10
+LABEL INDEX 11
+LABEL INDEX 12
+LABEL INDEX 13
+LABEL INDEX 14
+LABEL INDEX 15
+LABEL INDEX 16
+LABEL INDEX 17
+LABEL INDEX 18
+LABEL INDEX 19
+LABEL INDEX 20
+LABEL INDEX 21
+LABEL INDEX 22
+LABEL INDEX 23
+LABEL INDEX 24
+LABEL INDEX 25
+LABEL INDEX 26
+LABEL INDEX 27
+LABEL INDEX 28
+LABEL INDEX 29
+LABEL INDEX 0
+LABEL INDEX 1
+LABEL INDEX 2
+LABEL INDEX 3
+LABEL INDEX 4
+LABEL INDEX 5
+LABEL INDEX 6
+LABEL INDEX 7
+LABEL INDEX 8
+LABEL INDEX 9
+LABEL INDEX 10
+LABEL INDEX 11
+LABEL INDEX 12
+LABEL INDEX 13
+LABEL INDEX 14
+LABEL INDEX 15
+LABEL INDEX 16
+LABEL INDEX 17
+LABEL INDEX 18
+LABEL INDEX 19
+LABEL INDEX 20
+LABEL INDEX 0
+LABEL INDEX 1
+LABEL INDEX 2
+LABEL INDEX 3
+LABEL INDEX 4
+LABEL INDEX 5
+LABEL INDEX 6
+LABEL INDEX 7
+LABEL INDEX 8
+LABEL INDEX 9
+LABEL INDEX 10
+LABEL INDEX 11
+LABEL INDEX 12
+LABEL INDEX 13
+LABEL INDEX 14
+LABEL INDEX 15
+LABEL INDEX 16
+LABEL INDEX 17
+LABEL INDEX 18
+LABEL INDEX 19
+LABEL INDEX 20
+LABEL INDEX 0
+LABEL INDEX 1
+LABEL INDEX 2
+LABEL INDEX 3
+LABEL INDEX 4
+LABEL INDEX 5
+LABEL INDEX 6
+LABEL INDEX 7
+LABEL INDEX 8
+LABEL INDEX 9
+LABEL INDEX 10
+LABEL INDEX 11
+LABEL INDEX 12
+LABEL INDEX 13
+LABEL INDEX 14
+LABEL INDEX 15
+LABEL INDEX 16
+LABEL INDEX 17
+LABEL INDEX 18
+LABEL INDEX 19
+LABEL INDEX 20
+LABEL INDEX 0
+LABEL INDEX 1
+LABEL INDEX 2
+LABEL INDEX 3
+LABEL INDEX 4
+LABEL INDEX 5

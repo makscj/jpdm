@@ -1,0 +1,102 @@
+<TITLE>
+Suicide Rates
+<SUBTITLE>
+See health excel doc
+<EXCEL COLUMN RANGE>
+HG-HI
+<VECTOR LABELS>
+hokkaido
+aomori-ken
+iwate-ken
+miyagi-ken
+akita-ken
+yamagata-ken
+fukushima-ken
+ibaraki-ken
+tochigi-ken
+gumma-ken
+saitama-ken
+chiba-ken
+tokyo-to
+kanagawa-ken
+niigata-ken
+toyama-ken
+ishikawa-ken
+fukui-ken
+yamanashi-ken
+nagano-ken
+gifu-ken
+shizuoka-ken
+aichi-ken
+mie-ken
+shiga-ken
+kyoto-fu
+osaka-fu
+hyogo-ken
+nara-ken
+wakayama-ken
+tottori-ken
+shimane-ken
+okayama-ken
+hiroshima-ken
+yamaguchi-ken
+tokushima-ken
+kagawa-ken
+ehime-ken
+kochi-ken
+fukuoka-ken
+saga-ken
+nagasaki-ken
+kumamoto-ken
+oita-ken
+miyazaki-ken
+kagoshima-ken
+okinawa-ken
+<DATA>
+27.4	25.4	20.1
+36.8	29.5	20.5
+34.2	32.2	26.6
+26.9	22.9	19.6
+39.2	33.2	26.0
+31.1	26.4	21.6
+29.1	25.2	21.8
+23.7	24.0	19.7
+25.0	25.2	20.1
+25.3	25.9	20.4
+22.4	23.3	18.7
+22.1	22.1	19.9
+21.9	22.4	18.7
+19.8	21.4	17.3
+29.7	28.7	23.5
+30.7	23.1	22.8
+22.7	22.6	15.7
+23.5	20.2	17.1
+26.9	27.5	22.2
+25.4	23.6	20.9
+25.4	20.9	20.3
+21.9	23.2	18.5
+20.7	20.0	17.7
+20.0	19.4	17.3
+22.2	22.4	18.2
+21.1	22.8	17.5
+24.2	24.4	20.0
+23.4	23.0	19.8
+20.6	19.3	17.1
+25.9	25.1	17.4
+24.4	24.9	19.1
+27.8	26.0	20.4
+21.6	21.0	17.0
+22.0	21.7	19.4
+26.1	24.3	19.1
+20.0	19.6	19.9
+20.0	21.9	17.4
+25.4	21.1	20.5
+29.8	26.0	21.6
+24.8	23.5	19.7
+25.0	26.1	17.0
+29.3	26.0	19.4
+24.4	25.1	18.6
+24.3	22.5	17.6
+30.6	27.2	23.9
+26.2	24.4	21.4
+24.2	25.6	20.3

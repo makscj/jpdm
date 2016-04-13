@@ -10,7 +10,7 @@ import read
 import dataset
 import normalize
 import distance
-import regression
+
 
 
 ##############################################################
@@ -149,7 +149,7 @@ def crunchDictionaryList(dictionaries):
 	return bigDictionary
 
 
-def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, otherNotes, clusters):
+def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
 
 	now = datetime.datetime.now()
 	month = now.month
@@ -157,17 +157,15 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 	hour = now.hour
 	minute = now.minute
 
-	filename = '../../results/exp'+str(expIndex)+"/"+str(expIndex)+'_'+str(month)+'.'+str(day)+'_'+str(hour)+'.'+str(minute)+'_K.'+str(numClusters)
+	filename = '../../results/'+str(expIndex)+'_'+str(month)+'.'+str(day)+'_'+str(hour)+'.'+str(minute)
 	f = open(filename,'w')
 
 	f.write("CONFIGURATION DETAILS:\n\n")
 	f.write("Experiment index: "+str(expIndex)+"\n")
-	f.write("Number of clusters: "+str(numClusters)+"\n\n")
+	f.write("Number of clusters: "+str(numClusters)+"\n")
 	f.write("Clustering algorithm: "+clusteringAlgorithmInfo+"\n")
 	f.write("Distance measurement: "+distanceMeasurementInfo+"\n")
-	print vectorConfigurationInfo
 	f.write("Vector configuration: "+vectorConfigurationInfo+"\n")
-	f.write("Notes: "+otherNotes+"\n")
 
 	for i in range(0, numClusters):
 		# print "Cluster: ", i
@@ -191,6 +189,7 @@ def experiment1(datasets, numClusters):
 	# OR:
 	dataDictionaries = explicitlyConfigureActiveColumns(datasets, [0,1,2,3], True) 
 
+
 	###############---VECTOR NORMALIZATION---################
 
 	# At this point, have list of dictionaries. Each dictionary contains labels mapping to vectors.
@@ -200,8 +199,11 @@ def experiment1(datasets, numClusters):
 		# print d, "\n"
 		normalizedDictionaries.append(normalize.normalize(d)) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
+
 	###################---CLUSTERING---#####################
-	clusterResults = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+
+	clusters = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+
 
 	##################---STORE RESULTS---####################
 
@@ -210,118 +212,17 @@ def experiment1(datasets, numClusters):
 	distanceMeasurementInfo = "euclidean"
 	vectorConfigurationInfo = "explicitly configured, same columns used across datasets, Indices used: [0,1,2,3]"
 
-	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo,"", clusterResults[1])
+	writeFile(1, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, clusters)
 
 
-
-
-def experiment2(datasets, numClusters, dimensionality):
-
-	# ------------------------------------------------------------
-	# PART 1: CHOOSING DATA
-	# ------------------------------------------------------------
-	###############---VECTOR CONFIGURATION---################
-	###############---REDUCTION WITH REGRESSION---################=
-	for d in datasets:
-		reducedDictionary = regression.getLowerSpace(d.getVectors(), dimensionality)
-		d.setReducedDictionary(reducedDictionary, dimensionality)
-	
-	# ------------------------------------------------------------
-	# PART 2: NORMALIZATION AND CHOOSING DISTANCE MEASURE 
-	# ------------------------------------------------------------
-
-	###############---VECTOR NORMALIZATION---################
-
-	# At this point, have list of dictionaries of uniform dimensionality. 
-	# Each dictionary contains labels mapping to vectors.
-	normalizedDictionaries = []
-	for d in datasets:
-		# print d, "\n"
-		# print d
-		normalizedDictionaries.append(normalize.normalize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
-
-	# ------------------------------------------------------------
-	# PART 3: RUN
-	# ------------------------------------------------------------
-
-	###################---CLUSTERING---#####################
-	clusterResults  = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
-
-	# ------------------------------------------------------------
-	# PART 4: WRITE RESULTS 
-	# ------------------------------------------------------------
-	##################---STORE RESULTS---####################
-	# def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
-	# Prepare to write experiment file -- fill in the below values for this experiment.
-
-	clusteringAlgorithmInfo = "gonzalez"
-	distanceMeasurementInfo = "euclidean"
-	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
-	writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
-
-
-
-# datasets: Sets to be clustered 
-# dimensionality: If >0, then set to this value, if <=0 set to maximum valid dimensionality for  this data.
-def experiment3(datasets, dimensionality):
-
-	# ------------------------------------------------------------
-	# PART 1: CHOOSING DATA
-	# ------------------------------------------------------------
-	###############---VECTOR CONFIGURATION---################
-	###############---REDUCTION WITH REGRESSION---################=
-	for d in datasets:
-		reducedDictionary = regression.getLowerSpace(d.getVectors(), dimensionality)
-		d.setReducedDictionary(reducedDictionary, dimensionality)
-	
-	# ------------------------------------------------------------
-	# PART 2: NORMALIZATION AND CHOOSING DISTANCE MEASURE 
-	# ------------------------------------------------------------
-
-	###############---VECTOR NORMALIZATION---################
-
-	# At this point, have list of dictionaries of uniform dimensionality. 
-	# Each dictionary contains labels mapping to vectors.
-	normalizedDictionaries = []
-	for d in datasets:
-		# print d, "\n"
-		# print d
-		normalizedDictionaries.append(normalize.normalize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
-
-	# ------------------------------------------------------------
-	# PART 3: RUN
-	# ------------------------------------------------------------
-
-	###################---CLUSTERING---#####################
-	clusterResults  = cluster.gonzalez(crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
-
-	# ------------------------------------------------------------
-	# PART 4: WRITE RESULTS 
-	# ------------------------------------------------------------
-	##################---STORE RESULTS---####################
-	# def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
-	# Prepare to write experiment file -- fill in the below values for this experiment.
-
-	clusteringAlgorithmInfo = "gonzalez"
-	distanceMeasurementInfo = "euclidean"
-	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
-	writeFile(2, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
 
 
 
 if __name__ == "__main__":
 	# Read data files.
-	reader = read.Read(False) # READS EVERYTHING
+	reader = read.Read(False)
 	# Get data as list of dataset objects.
-	datasets = reader.getDataSets() # EVERY DATASET IS NOW AT YOUR DISPOSAL
-
-
-	copy1 = list(datasets)
-	# copy1.pop(0)
-	experiment1(copy1, 3)
-
-	copy2 = list(datasets)
-	# copy2.pop(0)
-	experiment2(copy2, 3, 2)
+	datasets = reader.getDataSets()
+	experiment1(datasets, 3)
 
 

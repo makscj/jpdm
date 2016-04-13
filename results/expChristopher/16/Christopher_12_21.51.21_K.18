@@ -1,0 +1,110 @@
+CONFIGURATION DETAILS:
+
+Experiment index: Christopher
+Number of clusters: 18
+
+Clustering algorithm: lloyds
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 35
+Notes: 35 dimensions, which is about half of amount of columns,using euclidean distatnce for the center costs and mean costs
+
+CLUSTER 0:
+
+	T18-gumma	
+	T18-mie	
+	T18-kyoto	
+	T18-yamagata	
+	T18-tochigi	
+
+CLUSTER 1:
+
+	T18-nagano	
+
+CLUSTER 2:
+
+	T18-yamaguchi	
+	T18-okinawa	
+	T18-ishikawa	
+
+CLUSTER 3:
+
+	T18-kanagawa	
+
+CLUSTER 4:
+
+	T18-miyagi	
+	T18-shimane	
+	T18-tokushima	
+	T18-fukui	
+	T18-kumamoto	
+
+CLUSTER 5:
+
+	T18-aichi	
+
+CLUSTER 6:
+
+	T18-saitama	
+	T18-tottori	
+
+CLUSTER 7:
+
+	T18-toyama	
+	T18-fukushima	
+	T18-shizuoka	
+	T18-iwate	
+	T18-akita	
+	T18-shiga	
+	T18-oita	
+
+CLUSTER 8:
+
+	T18-aomori	
+
+CLUSTER 9:
+
+	T18-gifu	
+
+CLUSTER 10:
+
+	T18-hokkaido	
+	T18-chiba	
+	T18-tokyo	
+	T18-osaka	
+
+CLUSTER 11:
+
+	T18-hiroshima	
+	T18-kagawa	
+	T18-hyogo	
+	T18-fukuoka	
+	T18-ehime	
+	T18-nara	
+
+CLUSTER 12:
+
+	T18-okayama	
+
+CLUSTER 13:
+
+	T18-niigata	
+
+CLUSTER 14:
+
+	T18-nagasaki	
+
+CLUSTER 15:
+
+	T18-saga	
+	T18-yamanashi	
+	T18-wakayama	
+	T18-miyazaki	
+	T18-kochi	
+
+CLUSTER 16:
+
+	T18-kagoshima	
+
+CLUSTER 17:
+
+	T18-ibaraki	

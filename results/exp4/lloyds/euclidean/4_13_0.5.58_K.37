@@ -1,0 +1,167 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 37
+
+Clustering algorithm: gonzalez
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 1
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T30-aichi-ken
+	T30-hokkaido
+
+CLUSTER 1:
+
+	T30-iwate-ken
+
+CLUSTER 2:
+
+	T30-saitama-ken
+
+CLUSTER 3:
+
+	T30-chiba-ken
+
+CLUSTER 4:
+
+	T30-yamaguchi-ken
+
+CLUSTER 5:
+
+	T30-tokyo-to
+
+CLUSTER 6:
+
+	T30-ishikawa-ken
+
+CLUSTER 7:
+
+	T30-hyogo-ken
+
+CLUSTER 8:
+
+	T30-fukushima-ken
+	T30-osaka-fu
+
+CLUSTER 9:
+
+	T30-tokushima-ken
+
+CLUSTER 10:
+
+	T30-miyagi-ken
+
+CLUSTER 11:
+
+	T30-aomori-ken
+	T30-fukuoka-ken
+
+CLUSTER 12:
+
+	T30-gifu-ken
+
+CLUSTER 13:
+
+	T30-okinawa-ken
+
+CLUSTER 14:
+
+	T30-shimane-ken
+
+CLUSTER 15:
+
+	T30-kanagawa-ken
+	T30-ibaraki-ken
+
+CLUSTER 16:
+
+	T30-shiga-ken
+
+CLUSTER 17:
+
+	T30-tochigi-ken
+
+CLUSTER 18:
+
+	T30-kagoshima-ken
+
+CLUSTER 19:
+
+	T30-toyama-ken
+
+CLUSTER 20:
+
+	T30-saga-ken
+	T30-fukui-ken
+
+CLUSTER 21:
+
+	T30-ehime-ken
+
+CLUSTER 22:
+
+	T30-kochi-ken
+
+CLUSTER 23:
+
+	T30-nagano-ken
+
+CLUSTER 24:
+
+	T30-kumamoto-ken
+	T30-nagasaki-ken
+	T30-mie-ken
+	T30-shizuoka-ken
+
+CLUSTER 25:
+
+	T30-oita-ken
+
+CLUSTER 26:
+
+	T30-akita-ken
+	T30-okayama-ken
+
+CLUSTER 27:
+
+	T30-tottori-ken
+
+CLUSTER 28:
+
+	T30-kyoto-fu
+
+CLUSTER 29:
+
+	T30-nara-ken
+
+CLUSTER 30:
+
+	T30-yamanashi-ken
+
+CLUSTER 31:
+
+	T30-hiroshima-ken
+
+CLUSTER 32:
+
+	T30-wakayama-ken
+
+CLUSTER 33:
+
+	T30-miyazaki-ken
+
+CLUSTER 34:
+
+	T30-gumma-ken
+	T30-kagawa-ken
+
+CLUSTER 35:
+
+	T30-yamagata-ken
+
+CLUSTER 36:
+
+	T30-niigata-ken

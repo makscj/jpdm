@@ -1,0 +1,179 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 41
+
+Clustering algorithm: gonzalez
+Distance measurement: euclidean
+Vector configuration: configured using regression, reduced to dimensionality:, 3
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T28-aomori-ken
+	T28-yamagata-ken
+	T28-okayama-ken
+
+CLUSTER 1:
+
+	T28-kagoshima-ken
+
+CLUSTER 2:
+
+	T28-chiba-ken
+
+CLUSTER 3:
+
+	T28-shiga-ken
+
+CLUSTER 4:
+
+	T28-saitama-ken
+
+CLUSTER 5:
+
+	T28-kyoto-fu
+
+CLUSTER 6:
+
+	T28-wakayama-ken
+
+CLUSTER 7:
+
+	T28-toyama-ken
+
+CLUSTER 8:
+
+	T28-aichi-ken
+	T28-fukuoka-ken
+
+CLUSTER 9:
+
+	T28-gifu-ken
+
+CLUSTER 10:
+
+	T28-kochi-ken
+
+CLUSTER 11:
+
+	T28-miyagi-ken
+
+CLUSTER 12:
+
+	T28-oita-ken
+
+CLUSTER 13:
+
+	T28-fukushima-ken
+
+CLUSTER 14:
+
+	T28-hiroshima-ken
+
+CLUSTER 15:
+
+	T28-ibaraki-ken
+
+CLUSTER 16:
+
+	T28-hokkaido
+
+CLUSTER 17:
+
+	T28-okinawa-ken
+
+CLUSTER 18:
+
+	T28-tokyo-to
+
+CLUSTER 19:
+
+	T28-saga-ken
+	T28-kagawa-ken
+
+CLUSTER 20:
+
+	T28-miyazaki-ken
+
+CLUSTER 21:
+
+	T28-nagasaki-ken
+
+CLUSTER 22:
+
+	T28-kanagawa-ken
+
+CLUSTER 23:
+
+	T28-osaka-fu
+
+CLUSTER 24:
+
+	T28-niigata-ken
+
+CLUSTER 25:
+
+	T28-tochigi-ken
+
+CLUSTER 26:
+
+	T28-yamanashi-ken
+
+CLUSTER 27:
+
+	T28-mie-ken
+
+CLUSTER 28:
+
+	T28-gumma-ken
+
+CLUSTER 29:
+
+	T28-akita-ken
+
+CLUSTER 30:
+
+	T28-ishikawa-ken
+
+CLUSTER 31:
+
+	T28-shizuoka-ken
+
+CLUSTER 32:
+
+	T28-nagano-ken
+
+CLUSTER 33:
+
+	T28-tottori-ken
+	T28-fukui-ken
+
+CLUSTER 34:
+
+	T28-ehime-ken
+	T28-yamaguchi-ken
+
+CLUSTER 35:
+
+	T28-kumamoto-ken
+
+CLUSTER 36:
+
+	T28-nara-ken
+
+CLUSTER 37:
+
+	T28-shimane-ken
+
+CLUSTER 38:
+
+	T28-tokushima-ken
+
+CLUSTER 39:
+
+	T28-iwate-ken
+
+CLUSTER 40:
+
+	T28-hyogo-ken

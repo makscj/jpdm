@@ -1,0 +1,146 @@
+CONFIGURATION DETAILS:
+
+Experiment index: Christopher
+Number of clusters: 30
+
+Clustering algorithm: lloyds
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 35
+Notes: 35 dimensions, which is about half of amount of columns,using euclidean distatnce for the center costs and mean costs
+
+CLUSTER 0:
+
+	T18-nagano	
+
+CLUSTER 1:
+
+	T18-fukui	
+	T18-kumamoto	
+
+CLUSTER 2:
+
+	T18-niigata	
+
+CLUSTER 3:
+
+	T18-hokkaido	
+	T18-shizuoka	
+	T18-tokyo	
+	T18-osaka	
+	T18-aichi	
+
+CLUSTER 4:
+
+	T18-okayama	
+
+CLUSTER 5:
+
+	T18-miyazaki	
+
+CLUSTER 6:
+
+	T18-yamaguchi	
+
+CLUSTER 7:
+
+	T18-yamanashi	
+	T18-kyoto	
+
+CLUSTER 8:
+
+	T18-chiba	
+
+CLUSTER 9:
+
+	T18-hyogo	
+
+CLUSTER 10:
+
+	T18-wakayama	
+
+CLUSTER 11:
+
+	T18-gumma	
+
+CLUSTER 12:
+
+	T18-okinawa	
+	T18-yamagata	
+	T18-ishikawa	
+
+CLUSTER 13:
+
+	T18-gifu	
+
+CLUSTER 14:
+
+	T18-akita	
+
+CLUSTER 15:
+
+	T18-saga	
+	T18-tochigi	
+	T18-kochi	
+	T18-nagasaki	
+
+CLUSTER 16:
+
+	T18-miyagi	
+
+CLUSTER 17:
+
+	T18-fukushima	
+	T18-shimane	
+	T18-tokushima	
+
+CLUSTER 18:
+
+	T18-aomori	
+
+CLUSTER 19:
+
+	T18-toyama	
+	T18-iwate	
+	T18-shiga	
+	T18-oita	
+
+CLUSTER 20:
+
+	T18-tottori	
+
+CLUSTER 21:
+
+	T18-hiroshima	
+
+CLUSTER 22:
+
+	T18-kanagawa	
+
+CLUSTER 23:
+
+	T18-nara	
+
+CLUSTER 24:
+
+	T18-mie	
+	T18-ehime	
+
+CLUSTER 25:
+
+	T18-saitama	
+
+CLUSTER 26:
+
+	T18-fukuoka	
+
+CLUSTER 27:
+
+	T18-kagawa	
+
+CLUSTER 28:
+
+	T18-ibaraki	
+
+CLUSTER 29:
+
+	T18-kagoshima	
