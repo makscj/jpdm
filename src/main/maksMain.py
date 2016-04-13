@@ -82,7 +82,7 @@ def experiment2(datasets, numClusters, dimensionality):
 	# ------------------------------------------------------------
 #	print normalizedDictionaries
 	###################---CLUSTERING---#####################
-	clusterResults  = cluster.lloyds(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+	clusterResults  = cluster.hierarchical(util.crunchDictionaryList(normalizedDictionaries), numClusters, cluster.singlelink);
 
 	# ------------------------------------------------------------
 	# PART 4: WRITE RESULTS 
