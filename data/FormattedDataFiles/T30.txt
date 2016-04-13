@@ -1,0 +1,102 @@
+<TITLE>
+Hospitals per 100,00 people
+<SUBTITLE>
+See health excel doc
+<EXCEL COLUMN RANGE>
+E-G
+<VECTOR LABELS>
+hokkaido
+aomori-ken
+iwate-ken
+miyagi-ken
+akita-ken
+yamagata-ken
+fukushima-ken
+ibaraki-ken
+tochigi-ken
+gumma-ken
+saitama-ken
+chiba-ken
+tokyo-to
+kanagawa-ken
+niigata-ken
+toyama-ken
+ishikawa-ken
+fukui-ken
+yamanashi-ken
+nagano-ken
+gifu-ken
+shizuoka-ken
+aichi-ken
+mie-ken
+shiga-ken
+kyoto-fu
+osaka-fu
+hyogo-ken
+nara-ken
+wakayama-ken
+tottori-ken
+shimane-ken
+okayama-ken
+hiroshima-ken
+yamaguchi-ken
+tokushima-ken
+kagawa-ken
+ehime-ken
+kochi-ken
+fukuoka-ken
+saga-ken
+nagasaki-ken
+kumamoto-ken
+oita-ken
+miyazaki-ken
+kagoshima-ken
+okinawa-ken
+<DATA>
+9.8	9.3	9.3
+6.5	6.4	6.4
+6.6	6.0	5.9
+5.2	5.1	4.9
+5.5	5.6	5.4
+4.6	4.8	4.8
+6.0	5.7	5.4
+6.2	5.5	5.5
+5.0	4.6	4.6
+6.4	6.0	5.9
+4.4	4.1	4.0
+4.2	4.0	4.0
+4.9	4.5	4.5
+3.6	3.3	3.2
+4.9	4.7	4.8
+8.6	8.3	8.4
+8.2	7.5	7.3
+9.3	8.1	7.5
+6.1	6.0	6.1
+5.5	5.4	5.4
+4.6	4.4	4.4
+4.1	4.1	4.0
+4.3	3.9	3.9
+5.4	4.8	4.9
+4.1	3.8	3.6
+6.2	6.2	6.2
+5.8	5.7	5.6
+5.7	5.7	5.8
+5.2	5.1	5.1
+7.8	8.2	8.0
+6.6	6.8	6.9
+6.7	6.4	6.4
+8.4	8.1	7.9
+8.0	7.8	7.6
+8.2	8.2	8.5
+13.2	13.0	12.9
+9.4	8.4	8.3
+9.4	9.0	9.1
+16.1	16.2	16.1
+8.3	8.0	7.9
+11.2	11.3	11.2
+9.5	9.4	9.4
+10.0	9.9	9.8
+11.6	11.2	11.3
+11.6	11.3	11.2
+13.7	13.4	13.1
+6.0	5.8	5.7
