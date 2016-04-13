@@ -50,7 +50,7 @@ def subsvd(U, S, V, k):
 
 	Uk = U[:,0:k];
 	Sk = S[0:k,0:k];
-	Vk = V[:,0:k];
+	Vk = np.transpose(V)[:,0:k];
 	return (Uk, Sk, Vk);
 
 
@@ -95,6 +95,7 @@ def getReducedSpace(data, k):
 	(keys, matrix) = createMatrix(data);
 	(U, S, V) = svd(matrix);
 	(Uk, Sk, Vk) = subsvd(U, S, V, k);
+	print np.transpose(V)[:,0:k];
 	lower = mapToPlane(Uk, Sk, Vk);
 	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
 

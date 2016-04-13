@@ -49,6 +49,55 @@ import util
 ##############################################################
 ##############################################################
 
+def experiment2(datasets, numClusters, dimensionality):
+
+	# ------------------------------------------------------------
+	# PART 1: CHOOSING DATA
+	# ------------------------------------------------------------
+	###############---VECTOR CONFIGURATION---################
+	###############---REDUCTION WITH REGRESSION---################=
+
+	
+	for d in datasets:
+		print d.getVectors();
+		reducedDictionary = regression.getReducedSpace(d.getVectors(), dimensionality)
+		d.setReducedDictionary(reducedDictionary, dimensionality)
+	
+	# ------------------------------------------------------------
+	# PART 2: NORMALIZATION AND CHOOSING DISTANCE MEASURE 
+	# ------------------------------------------------------------
+
+	###############---VECTOR NORMALIZATION---################
+
+	# At this point, have list of dictionaries of uniform dimensionality. 
+	# Each dictionary contains labels mapping to vectors.
+	normalizedDictionaries = []
+	for d in datasets:
+		# print d, "\n"
+		# print d
+		normalizedDictionaries.append(d.getReducedVectors()) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
+
+	# ------------------------------------------------------------
+	# PART 3: RUN
+	# ------------------------------------------------------------
+#	print normalizedDictionaries
+	###################---CLUSTERING---#####################
+	clusterResults  = cluster.lloyds(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+
+	# ------------------------------------------------------------
+	# PART 4: WRITE RESULTS 
+	# ------------------------------------------------------------
+	##################---STORE RESULTS---####################
+	# def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
+	# Prepare to write experiment file -- fill in the below values for this experiment.
+
+	clusteringAlgorithmInfo = "gonzalez"
+	distanceMeasurementInfo = "euclidean"
+	vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
+	util.writeFile("maks", numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Trying to get this thing to work!",clusterResults[1])
+
+
+
 if __name__ == "__main__":
 
 	#-----------------------------------
@@ -57,3 +106,4 @@ if __name__ == "__main__":
 	# Get data as list of dataset objects.
 	datasets = reader.getDataSets() # EVERY DATASET IS NOW AT YOUR DISPOSAL, and indices match dataset titles.
 	#-----------------------------------
+	experiment2([datasets[0]], 3, 1);
