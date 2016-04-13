@@ -77,20 +77,48 @@ class Read:
 
       labelIndex = 0
 
+      dataVectorAverages = []
+      averageCounts = []
+
       if "<DATA>" in line:
          line = f.readline()
          while not (line == "" or line=="\n"):
             line = line.strip()
             lineSplit = line.split() # Split on white space
+
+            if len(dataVectorAverages)==0: # Initialize
+               for i in range(0, len(lineSplit)):
+                  dataVectorAverages.append(0.0)
+                  averageCounts.append(0.0)
+
             dataVector = []
-            for s in lineSplit:
-               dataVector.append(self.parseNumber(s))
+            for s in range(0, len(lineSplit)):
+               num = self.parseNumber(lineSplit[s])
+               if num!=float('inf'): # Code for finding average value of each component-- for filling empty components
+                  dataVectorAverages[s]+=num
+                  averageCounts[s]+=1
+               dataVector.append(num)
+
             # print "DATASET ID", datasetID
             # print "LABEL INDEX", labelIndex
             L=labels[labelIndex]
             dataDictionary["T"+str(datasetID)+"-"+L]=dataVector
             labelIndex+=1
             line = f.readline()
+
+      # Get average value that was seen for each vector component
+      for a in range(0, len(dataVectorAverages)):
+         dataVectorAverages[a]=dataVectorAverages[a]/averageCounts[a]
+
+      # Replace empty values (set as -1 temporarily) with the average value for their component
+      for key in dataDictionary:
+         dataVector = dataDictionary[key]
+         for s in range(0, len(dataVector)):
+            if dataVector[s]==float('inf'):
+               dataVector[s]=dataVectorAverages[s]
+         print "VECTOR:",dataVector
+
+
 
       if not (len(dataDictionary)==len(labels)):
          print "ERROR 1"
@@ -111,7 +139,7 @@ class Read:
             number = float(s.replace(",",""))
             return number
          except:
-            return -1.0
+            return float('inf')
 
    def getDataSets(self):
       return self.dataSets
