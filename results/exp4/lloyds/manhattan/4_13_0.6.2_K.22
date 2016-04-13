@@ -1,0 +1,122 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 22
+
+Clustering algorithm: gonzalez
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 1
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T31-toyama-ken
+	T31-yamanashi-ken
+
+CLUSTER 1:
+
+	T31-tokyo-to
+
+CLUSTER 2:
+
+	T31-kochi-ken
+	T31-kyoto-fu
+	T31-ishikawa-ken
+
+CLUSTER 3:
+
+	T31-kanagawa-ken
+	T31-okayama-ken
+	T31-aichi-ken
+	T31-kagawa-ken
+	T31-tokushima-ken
+
+CLUSTER 4:
+
+	T31-saitama-ken
+	T31-oita-ken
+
+CLUSTER 5:
+
+	T31-nara-ken
+
+CLUSTER 6:
+
+	T31-fukui-ken
+
+CLUSTER 7:
+
+	T31-yamagata-ken
+	T31-niigata-ken
+	T31-miyazaki-ken
+
+CLUSTER 8:
+
+	T31-gifu-ken
+	T31-hyogo-ken
+
+CLUSTER 9:
+
+	T31-shizuoka-ken
+	T31-osaka-fu
+
+CLUSTER 10:
+
+	T31-saga-ken
+	T31-wakayama-ken
+	T31-tottori-ken
+	T31-chiba-ken
+
+CLUSTER 11:
+
+	T31-kumamoto-ken
+	T31-fukuoka-ken
+
+CLUSTER 12:
+
+	T31-shiga-ken
+
+CLUSTER 13:
+
+	T31-hiroshima-ken
+
+CLUSTER 14:
+
+	T31-ibaraki-ken
+	T31-ehime-ken
+
+CLUSTER 15:
+
+	T31-nagasaki-ken
+
+CLUSTER 16:
+
+	T31-hokkaido
+	T31-shimane-ken
+
+CLUSTER 17:
+
+	T31-nagano-ken
+	T31-miyagi-ken
+	T31-tochigi-ken
+	T31-yamaguchi-ken
+	T31-okinawa-ken
+
+CLUSTER 18:
+
+	T31-fukushima-ken
+
+CLUSTER 19:
+
+	T31-aomori-ken
+	T31-akita-ken
+	T31-iwate-ken
+
+CLUSTER 20:
+
+	T31-gumma-ken
+	T31-kagoshima-ken
+
+CLUSTER 21:
+
+	T31-mie-ken

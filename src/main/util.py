@@ -98,7 +98,7 @@ def writeCostFile(expIndex, maxClusters, centerCosts, meanCosts, clusterFileName
 	if not (len(centerCosts)==len(meanCosts) and len(centerCosts)==len(clusterFileNames)):
 		print "PROBLEM--NUMBER OF COSTS DOESNT MATCH NUMBER OF CLUSTER EXPERIMENTS."
 
-	f = open('../../results/exp'+str(expIndex)+"/"+clusterFileNames[0]+"_CDF_POINTS",'w')
+	f = open('../../results/exp'+str(expIndex)+"/euclidean/"+clusterFileNames[0]+"_CDF_POINTS",'w')
 	f.write("CDF POINTS\n\n")
 
 	f.write("CENTER COST POINTS (N, cost):\n")
@@ -133,7 +133,7 @@ def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasuremen
 	second = now.second
 
 	filename = str(expIndex)+'_'+str(day)+'_'+str(hour)+'.'+str(minute)+'.'+str(second)+'_K.'+str(numClusters)
-	f = open('../../results/exp'+str(expIndex)+"/"+filename,'w')
+	f = open('../../results/exp'+str(expIndex)+"/euclidean/"+filename,'w')
 
 	f.write("CONFIGURATION DETAILS:\n\n")
 	f.write("Experiment index: "+str(expIndex)+"\n")

@@ -1,0 +1,134 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 26
+
+Clustering algorithm: gonzalez
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 3
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T26-gumma-ken
+
+CLUSTER 1:
+
+	T26-tochigi-ken
+	T26-yamaguchi-ken
+
+CLUSTER 2:
+
+	T26-tottori-ken
+
+CLUSTER 3:
+
+	T26-kanagawa-ken
+
+CLUSTER 4:
+
+	T26-aomori-ken
+	T26-kochi-ken
+	T26-aichi-ken
+	T26-nara-ken
+
+CLUSTER 5:
+
+	T26-yamanashi-ken
+
+CLUSTER 6:
+
+	T26-tokyo-to
+
+CLUSTER 7:
+
+	T26-hiroshima-ken
+
+CLUSTER 8:
+
+	T26-shizuoka-ken
+	T26-gifu-ken
+
+CLUSTER 9:
+
+	T26-niigata-ken
+	T26-ibaraki-ken
+	T26-mie-ken
+
+CLUSTER 10:
+
+	T26-fukushima-ken
+
+CLUSTER 11:
+
+	T26-hyogo-ken
+
+CLUSTER 12:
+
+	T26-kyoto-fu
+	T26-fukuoka-ken
+	T26-nagano-ken
+
+CLUSTER 13:
+
+	T26-ishikawa-ken
+
+CLUSTER 14:
+
+	T26-iwate-ken
+
+CLUSTER 15:
+
+	T26-oita-ken
+
+CLUSTER 16:
+
+	T26-kagawa-ken
+
+CLUSTER 17:
+
+	T26-shimane-ken
+	T26-chiba-ken
+	T26-osaka-fu
+	T26-okayama-ken
+	T26-saga-ken
+
+CLUSTER 18:
+
+	T26-kagoshima-ken
+
+CLUSTER 19:
+
+	T26-miyagi-ken
+	T26-wakayama-ken
+
+CLUSTER 20:
+
+	T26-miyazaki-ken
+
+CLUSTER 21:
+
+	T26-fukui-ken
+	T26-toyama-ken
+	T26-nagasaki-ken
+
+CLUSTER 22:
+
+	T26-saitama-ken
+	T26-yamagata-ken
+
+CLUSTER 23:
+
+	T26-tokushima-ken
+	T26-okinawa-ken
+	T26-kumamoto-ken
+
+CLUSTER 24:
+
+	T26-akita-ken
+
+CLUSTER 25:
+
+	T26-shiga-ken
+	T26-hokkaido
+	T26-ehime-ken

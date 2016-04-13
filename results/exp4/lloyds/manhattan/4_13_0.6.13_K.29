@@ -1,0 +1,143 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 29
+
+Clustering algorithm: gonzalez
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 7
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T32-kochi-ken
+	T32-ehime-ken
+	T32-kagoshima-ken
+
+CLUSTER 1:
+
+	T32-tochigi-ken
+
+CLUSTER 2:
+
+	T32-mie-ken
+
+CLUSTER 3:
+
+	T32-yamagata-ken
+	T32-shizuoka-ken
+
+CLUSTER 4:
+
+	T32-kanagawa-ken
+
+CLUSTER 5:
+
+	T32-yamaguchi-ken
+	T32-wakayama-ken
+
+CLUSTER 6:
+
+	T32-aichi-ken
+
+CLUSTER 7:
+
+	T32-niigata-ken
+	T32-kagawa-ken
+
+CLUSTER 8:
+
+	T32-gifu-ken
+	T32-nara-ken
+
+CLUSTER 9:
+
+	T32-tokyo-to
+
+CLUSTER 10:
+
+	T32-kumamoto-ken
+
+CLUSTER 11:
+
+	T32-miyagi-ken
+
+CLUSTER 12:
+
+	T32-oita-ken
+
+CLUSTER 13:
+
+	T32-fukui-ken
+	T32-hokkaido
+
+CLUSTER 14:
+
+	T32-gumma-ken
+	T32-saitama-ken
+
+CLUSTER 15:
+
+	T32-nagasaki-ken
+	T32-fukushima-ken
+	T32-tottori-ken
+
+CLUSTER 16:
+
+	T32-okinawa-ken
+	T32-hiroshima-ken
+	T32-kyoto-fu
+
+CLUSTER 17:
+
+	T32-toyama-ken
+
+CLUSTER 18:
+
+	T32-miyazaki-ken
+
+CLUSTER 19:
+
+	T32-saga-ken
+	T32-yamanashi-ken
+
+CLUSTER 20:
+
+	T32-chiba-ken
+
+CLUSTER 21:
+
+	T32-akita-ken
+	T32-iwate-ken
+
+CLUSTER 22:
+
+	T32-osaka-fu
+	T32-okayama-ken
+
+CLUSTER 23:
+
+	T32-nagano-ken
+
+CLUSTER 24:
+
+	T32-hyogo-ken
+	T32-aomori-ken
+	T32-shiga-ken
+
+CLUSTER 25:
+
+	T32-shimane-ken
+
+CLUSTER 26:
+
+	T32-fukuoka-ken
+
+CLUSTER 27:
+
+	T32-ishikawa-ken
+
+CLUSTER 28:
+
+	T32-tokushima-ken
+	T32-ibaraki-ken

@@ -1,0 +1,140 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 4
+Number of clusters: 28
+
+Clustering algorithm: gonzalez
+Distance measurement: euclidean
+Vector configuration: configured using regression, reduced to dimensionality:, 4
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T29-nagano-ken
+	T29-yamanashi-ken
+	T29-nara-ken
+	T29-yamagata-ken
+	T29-oita-ken
+	T29-kumamoto-ken
+
+CLUSTER 1:
+
+	T29-okinawa-ken
+
+CLUSTER 2:
+
+	T29-aomori-ken
+
+CLUSTER 3:
+
+	T29-kochi-ken
+
+CLUSTER 4:
+
+	T29-osaka-fu
+
+CLUSTER 5:
+
+	T29-okayama-ken
+
+CLUSTER 6:
+
+	T29-saitama-ken
+	T29-tokyo-to
+	T29-kanagawa-ken
+
+CLUSTER 7:
+
+	T29-hokkaido
+
+CLUSTER 8:
+
+	T29-wakayama-ken
+
+CLUSTER 9:
+
+	T29-fukuoka-ken
+
+CLUSTER 10:
+
+	T29-kagoshima-ken
+
+CLUSTER 11:
+
+	T29-mie-ken
+	T29-niigata-ken
+	T29-hiroshima-ken
+
+CLUSTER 12:
+
+	T29-shimane-ken
+
+CLUSTER 13:
+
+	T29-miyagi-ken
+
+CLUSTER 14:
+
+	T29-shiga-ken
+	T29-ishikawa-ken
+
+CLUSTER 15:
+
+	T29-shizuoka-ken
+
+CLUSTER 16:
+
+	T29-iwate-ken
+
+CLUSTER 17:
+
+	T29-ehime-ken
+	T29-miyazaki-ken
+
+CLUSTER 18:
+
+	T29-kagawa-ken
+	T29-saga-ken
+
+CLUSTER 19:
+
+	T29-kyoto-fu
+	T29-hyogo-ken
+
+CLUSTER 20:
+
+	T29-akita-ken
+	T29-yamaguchi-ken
+
+CLUSTER 21:
+
+	T29-tokushima-ken
+
+CLUSTER 22:
+
+	T29-toyama-ken
+
+CLUSTER 23:
+
+	T29-tottori-ken
+
+CLUSTER 24:
+
+	T29-nagasaki-ken
+
+CLUSTER 25:
+
+	T29-gumma-ken
+	T29-ibaraki-ken
+	T29-tochigi-ken
+	T29-fukushima-ken
+
+CLUSTER 26:
+
+	T29-gifu-ken
+	T29-fukui-ken
+
+CLUSTER 27:
+
+	T29-chiba-ken
+	T29-aichi-ken

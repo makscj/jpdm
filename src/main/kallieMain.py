@@ -105,7 +105,7 @@ def experiment4(datasets, distanceMeasure, distanceMeasureString, dimDivisor):
 		# ------------------------------------------------------------
 		###################---CLUSTERING---#####################
 		crunchedData = util.crunchDictionaryList(normalizedDictionaries)
-		clusterResults  = cluster.gonzalez(crunchedData, numClusters, distanceMeasure);
+		clusterResults  = cluster.lloyds(crunchedData, numClusters, distanceMeasure);
 
 		# ------------------------------------------------------------
 		# PART 4: Get costs (if gonzalez or lloyds)
@@ -143,6 +143,6 @@ if __name__ == "__main__":
 	#-----------------------------------
 
 	for d in range(23, 33):
-		
+
 		experiment4([datasets[d]], distance.euclidean, "euclidean",2)
-		experiment4([datasets[d]], distance.manhattan, "manhattan",2)
+		# experiment4([datasets[d]], distance.manhattan, "manhattan",2)
