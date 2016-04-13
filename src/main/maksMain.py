@@ -73,18 +73,16 @@ def experiment2(datasets, numClusters, dimensionality):
 	# Each dictionary contains labels mapping to vectors.
 	normalizedDictionaries = []
 	for d in datasets:
-		# print d, "\n"
-		# print d
 		normalizedDictionaries.append(d.getReducedVectors()) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
-	print normalizedDictionaries
+
 	# ------------------------------------------------------------
 	# PART 3: RUN
 	# ------------------------------------------------------------
-#	print normalizedDictionaries
 	###################---CLUSTERING---#####################
 	clusterResults  = cluster.lloyds(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.infNorm);
 
+	print clusterResults[1];
 	# ------------------------------------------------------------
 	# PART 4: WRITE RESULTS 
 	# ------------------------------------------------------------
@@ -107,4 +105,4 @@ if __name__ == "__main__":
 	# Get data as list of dataset objects.
 	datasets = reader.getDataSets() # EVERY DATASET IS NOW AT YOUR DISPOSAL, and indices match dataset titles.
 	#-----------------------------------
-	experiment2([datasets[0]], 3, 1);
+	experiment2([datasets[27]], 3, 5);
