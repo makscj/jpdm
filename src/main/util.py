@@ -100,12 +100,23 @@ def writeCostFile(expIndex, maxClusters, centerCosts, meanCosts, clusterFileName
 
 	f = open('../../results/exp'+str(expIndex)+"/"+clusterFileNames[0]+"_CDF_POINTS",'w')
 	f.write("CDF POINTS\n\n")
+
 	f.write("CENTER COST POINTS (N, cost):\n")
 	for c in range(1, maxClusters+1):
 		f.write(str(c)+"\t"+str(centerCosts[c-1])+"\n")
 	f.write("\nMEAN COST POINTS (N, cost):\n")
 	for c in range(1, maxClusters+1):
 		f.write(str(c)+"\t"+str(meanCosts[c-1])+"\n")
+
+
+	f.write("\nCENTER COST POINTS (N, cost):\n[")
+	for c in range(1, maxClusters+1):
+		f.write("["+str(c)+","+str(centerCosts[c-1])+"];")
+	f.write("]\n")
+	f.write("\nMEAN COST POINTS (N, cost):\n[")
+	for c in range(1, maxClusters+1):
+		f.write("["+str(c)+","+str(meanCosts[c-1])+"];")
+	f.write("]\n")
 	f.write("\nCORRESPONDING CLUSTER FILES:\n")
 	for name in clusterFileNames:
 		f.write(name+"\n")

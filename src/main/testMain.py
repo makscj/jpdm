@@ -183,7 +183,7 @@ def experiment3(datasets, dimensionality):
 		for d in datasets:
 			# print d, "\n"
 			# print d
-			normalizedDictionaries.append(normalize.normalize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
+			normalizedDictionaries.append(normalize.normalizeMinMax(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
 		# ------------------------------------------------------------
 		# PART 3: RUN
@@ -232,6 +232,6 @@ if __name__ == "__main__":
 
 	copy2 = list(datasets) # This is where you choose which tables you're using
 	copy2.pop(0)
-	experiment3([copy2[15], copy2[13]], -1) # This is where you choose which tables you're using
+	experiment3([copy2[2], copy2[5]], -1) # This is where you choose which tables you're using
 
 
