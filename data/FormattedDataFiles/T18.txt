@@ -1,7 +1,7 @@
 <TITLE>
 The attendance rate for schools at every level by prefecture
 <SUBTITLE> 
-See PrefectureDataAll excel file
+Prefecture
 <EXCEL COLUMN RANGE>
 See PrefectureDataAll excel file
 <VECTOR LABELS>
