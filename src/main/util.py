@@ -82,8 +82,8 @@ def explicitlyConfigureActiveColumns(datasets, listOfActiveIndices, sameArrayFor
 	return dataDictionaries
 
 
-# Takes a list of dictionaries and returns a single dictionary
 
+# Takes a list of dictionaries and returns a single dictionary
 def crunchDictionaryList(dictionaries):
 	bigDictionary = {}
 	for d in dictionaries:
