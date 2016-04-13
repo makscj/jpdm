@@ -1,0 +1,323 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thin Sectioned Essay
+% LaTeX Template
+% Version 1.0 (3/8/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original Author:
+% Nicolas Diaz (nsdiaz@uc.cl) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{parskip} %stop indentation and add more space between paragraphs
+\usepackage[margin=1in]{geometry}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{float}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+\usepackage{dcolumn}
+\usepackage{bbm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{accents}
+\usepackage{framed}
+\usepackage{pdfpages}
+\usepackage{tikz}
+%stops indentation and adds a little more space between paragraphs.
+\usepackage{parskip}
+%adds url function
+\usepackage{url}
+
+%\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{ % Customize the title - do not edit title and author name here, see the TITLE block below
+\begin{flushright} % Right align
+{\LARGE\@title} % Increase the font size of the title
+
+\vspace{40pt} % Some vertical space between the title and author name
+
+{\large\@author} % Author name
+\\\@date % Date
+
+\vspace{40pt} % Some vertical space between the author block and abstract
+\end{flushright}
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\title{\textbf{Japanese Census Data} % Title
+} % Subtitle
+
+\author{\textsc{Kallie Bracken\\Maks Cegielski-Johnson\\Christopher Hartley} % Author
+% \\ {\textit{Data Mining - Spring 2016}}} % Institution
+}
+\date{\today} % Date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Introduction} % Uncomment to change the name of the abstract to something else
+
+\section{\textsc{summary}}
+The objective of this project was to find interesting relations and patterns in Japanese Census Data\footnote{\url{https://aws.amazon.com/datasets/japan-census-data/}}. The main challenge that we faced in evaluating this dataset is in the vast amount of non-uniformly structured data that it includes. Although the census data includes hundreds of tables of information, it is difficult to draw relations between different tables because they are all so different---each of them describe different topics, often using very different attributes and units of measure. 
+
+The majority of our experimental design concerns how to address the challenges posed by our dataset. We discuss the approach that we took in an effort to meet this challenge; key components of our solution include our use of regression and clustering algorithms to search for patterns. Early on in this project we also designed a strong model by which to experiment with various algorithms and data configurations. The structure of our model played an integral role in our ability to meet the challenge set by our data, as it allowed us to efficiently run and compare a broad range of approaches for analyzing our data. 
+
+In the Methods section, we shall discuss the high level architecture of our system, including the various algorithms that we applied. In the Model Verification section we use a simple test dataset to demonstrate that all of our algorithms work as expected---testing our model in this way helped us ensure that our implementation is sound, so that we can trust that our experimental results are reflective of the data and other factors outside of the validity of our model. 
+
+In the final sections we discuss the results of our analysis. We ultimately decided to focus on components of the census data that had a common attribute, so that our clusters were more likely to be significant and well-structured. We isolated census data measured by \textit{prefecture} (i.e. region/province), and focused on identifying clusters between prefectures. We ran 
+
+
+
+\section{\textsc{methods}}
+
+If a value is missing, we are making it the average of the others in the same column.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Normalization} & \textbf{Distances} & \textbf{Clustering}    & \textbf{Regression}          \\ \hline\hline
+Feature Scaling        & Euclidean          & Gonzalez ($k$-centers) & Single Value Decomposition   \\ \hline
+Standard Score         & Manhattan          & Lloyd's ($k$-means)    & Principal Component Analysis \\ \hline
+~                & ~           & Hierarchical           & ~                       \\ \hline
+\end{tabular}
+\caption{Overview of methods used.}
+\label{my-label}
+\end{table}
+\section{\textsc{Model Verification}}
+
+We must now verify that our process works. First, we generate 3 clusters of 10 points, $\mathcal{A}$, using a Gaussian multivariate random variable in $\mathbb{R}^2$. Performing any of our clustering algorithms for 3 clusters will result in the clustering presented in Figure \ref{init_clusters}. This figure presents the optimal clustering for the data in $\mathbb{R}^2$. Now let us investigate how our procedure will alter this data. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{init_clusters}
+\caption{Verification data $\mathcal{A}$ and the 3-clustering on $\mathcal{A}$}
+\label{init_clusters}
+\end{figure}
+The first thing we can do is run singular value decomposition (SVD) on our data matrix $\mathcal{A}$. This will give us three matrices, $U$, $S$, and $V$. We can reduce the dimensionality of our data by removing certain entries from these matrices. The matrix we are the most interested in is $V$, which represents the right-singular values of our data. If we keep $k$ columns of $V$, we get the matrix $V_k$. For our example data, if we let $k = 1$, we get 
+$$V_k = \begin{bmatrix}
+0.986167 & 0.16575477
+\end{bmatrix}^T$$
+We can use the matrix $V_k$ to represent a plane in $\mathbb{R}^2$ (in this case a line) which minimizes the sum of the residuals squared. We can project all of the points in $\mathcal{A}$ onto this plane using
+$$\mathcal{A}V_kV_k^T$$
+This plane is visualized in Figure \ref{svd_clusters} along with the projection of $\mathcal{A}$. The clusters on the plane are colored such that they match the original clustering of $\mathcal{A}$. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{svd_clusters}
+  \caption{The $V_k$ plane and the projection of $\mathcal{A}$ onto this plane. Clusters on plane correlate to $\mathcal{A}$ clustering.}
+  \label{svd_clusters}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.9\linewidth]{plane_clusters}
+  \caption{Clustering of points on $\mathcal{A}V_kV_k^T$}
+  \label{plane_clusters}
+\end{subfigure}
+\caption{Comparison of clustering on $\mathcal{A}$ and $\mathcal{A}V_kV_k^T$}
+\label{fig:test}
+\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=.5]{svd_clusters}
+%\caption{The $V_k$ plane and the projection of $\mathcal{A}$ onto this plane.}
+%\label{svd_clusters}
+%\end{figure}
+We can now cluster the points on $\mathcal{A}V_kV_k^T$, which can be seen in Figure \ref{plane_clusters}. The colors are changed to represent different clusters.
+
+From Figure \ref{svd_clusters} and \ref{plane_clusters} we can see that the projection from $\mathbb{R}^2$ to a lower dimension loses us information that can accurately cluster the original data; but this was to be expected. One way to avoid this is by performing principal component analysis (PCA) on  $\mathcal{A}$ rather than just SVD. PCA is defined as the following
+$$U_p, S_p, V_p = \text{SVD}\big((I_n - \frac{1}{n}\mathbf{1}\mathbf{1}^T)\mathcal{A}\big)$$
+where $I_n$ is the identity matrix, and $\mathbf{1}$ is the vector of all ones in $\mathbb{R}^n$. As we did for regular SVD, let us consider the first $k$ columns of $V_p$ as $V_{p,k}$. We can now map all the points from $\mathcal{A}$ onto the plane
+$$\mathcal{A}V_{p,k}V_{p,k}^T$$
+Clustering these points, we see that the 3-clustering of $\mathcal{A}V_{p,k}V_{p,k}^T$ is identical to the 3-clustering of $\mathcal{A}$. This can be seen in Figure \ref{pca_clusters}, where the clusters on the plane share the matching color as the clusters for $\mathcal{A}$. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=.5]{pca_clusters}
+\caption{Clustering of points on $\mathcal{A}V_{p,k}V_{p,k}^T$}
+\label{pca_clusters}
+\end{figure}
+We can see that PCA is capable of preserving the original clustering from the higher dimension in this new projection for the dataset $\mathcal{A}$. 
+
+The last thing we need to investigate is our normalization techniques. We can perform two types of normalization on $\mathcal{A}$: Normalization and Standardization. We can perform both techniques on $\mathcal{A}$ and show where the original 3-clustering of $\mathcal{A}$ will lie --- shown in Figures \ref{verify_norm} and \ref{verify_stand}.
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.4\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{verify_norm}
+  \caption{Normalization of $\mathcal{A}$}
+  \label{verify_norm}
+\end{subfigure}%
+\begin{subfigure}{.7\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{verify_stand}
+  \caption{Standardization of $\mathcal{A}$}
+  \label{verify_stand}
+\end{subfigure}
+\caption{Comparison of clustering on $\mathcal{A}$ and $\mathcal{A}V_kV_k^T$}
+\label{normalizations}
+\end{figure}
+We can see that using standardization seems to give more room to the data, but maps the points to relatively the same positions --- hence we should be fine just using standardization. It may seem that due to the dimensionality of the problem, normalizing the data acts similarly to projecting $\mathcal{A}$ to a plane. Perhaps this will be different at higher dimensions, however it will be harder to visualize. 
+
+
+\section{\textsc{experiments}}
+
+We started our experiments running all our algoritms on our data set. For clustering we were using gonzalez, llyods and hierarchical algorithms. We used these with a mixutre of our normalizations standardized and min max. We also implented distance using euclidean, manhattan, infitiy Normal, jaccard and cosine. We also used SVD and PCA for regression. After running a mixutre of all of these we slowly found what worked best with our data.
+
+
+-dropped hierarchical because we wanted to cost measure\\
+-dropped min max\\
+-dropped cosine, then jaccard, then infitiy Normal\\
+
+Kept both regressions\\
+
+We tested our data using every column\\
+then with half the amount of columns using regression\\
+
+Running the experiments helped us see what data we should be using\\
+
+started by using only rows with prefectures\\
+
+norrowed down the topic to schools in prefectures\\
+
+after running some experiments we started to use data that was more simliar still with rows all being prefectures\\
+
+\section{\textsc{data}}
+
+
+
+
+\section{\textsc{results}}
+
+After running many experiments we had many different result files that we could work with. We decided to compare using center costs and the mean cost. One of the fist things we could see when comparing Lloyyd's to Gonzalez was that clustering with Lloyd's gave us data that seemed more random. The center costs for Lloyd's was more scattered, while still decreasing. Gonzales on the other hand was more of a steady decrease which helped create better clustering. For example, in the data set that compared weather by prefectures, we could clearly see the decrease in the center cost using Gonzalez whereas Lloyd's it more ambiguous. The mean costs didn't give us much of a difference.
+
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{t27center}
+  \caption{Comparing center costs}
+  \label{center_cluster_costs}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{t27mean}
+  \caption{Comparing mean costs}
+  \label{mean_cluster_costs}
+\end{subfigure}
+\caption{Comparing clustering algorithms}
+\label{cluster_compare}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{t31center}
+  \caption{Comparing center costs}
+  \label{center_distance_costs}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{t31mean}
+  \caption{Comparing mean costs}
+  \label{mean_distance_costs}
+\end{subfigure}
+\caption{Comparing distance metrics for the Gonzalez algorithm}
+\label{cluster_compare}
+\end{figure}
+
+
+Our next area of focus in the results was looking to see which distance worked best through out our data. We could see, although small, a difference  We thought it would be interesting to look at some data we found about suicide rates by prefecture. As shown in the figure above we can see that comparing the center and mean costs using Euclidean and Manhattan was barely visible. This shows that it would be better to use Euclidean as it is easier to compute. 
+
+2. Distances: Gonzalez, suicide rates (T31)\\
+
+
+3. Talk in general about data and what was clustered\\
+
+
+4. Instead of finding cool clusters, focus on how we know we DID cluster, so if we knew more about the places we could find interesting commonalities between them.\\
+
+\section{\textsc{conclusions \& future work}}
+
+\section{\textsc{appendix}}
+
+\begin{table}[H]
+\centering
+\caption{Contributions}
+\label{contributions}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Kallie}     & \textbf{Maks}       & \textbf{Christopher} \\ \hline
+System Architecture & Algorithms          & Experimenting  \\ \hline
+Design System       & Regression          & Distances      \\ \hline
+Data Finding        & Clustering          & Normalization  \\ \hline
+Experimentation     & Verficaiton         & Data Finding   \\ \hline
+Report:Methods      & Report:Verification & Report:Results  \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{enumerate}
+\item Comparing Gonzalez and Lloyds: weather (T27)
+
+\item Distances: Gonzalez, suicide rates (T31)
+
+\item Talk in general about data and what was clustered
+
+\item Instead of finding cool clusters, focus on how we know we DID cluster, so if we knew more about the places we could find interesting commonalities between them.
+\end{enumerate}
+ul
+
+%----------------------------------------------------------------------------------------
+%	ESSAY BODY
+%----------------------------------------------------------------------------------------
+
+%This statement requires citation \cite{Smith:2012qr};
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+% \bibliographystyle{unsrt}
+
+% \bibliography{bibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
