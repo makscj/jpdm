@@ -21,10 +21,12 @@ class Read:
       verbose = False
       dir = os.path.dirname(sys.argv[0])
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
+      # print os.listdir(listDirPath)
       nFiles = len(os.listdir(listDirPath))
       # nFiles = len(os.listdir(listDirPath))-4
+      print os.listdir(listDirPath)
 
-      # print nFiles
+      print nFiles
       self.fileRange = [0, nFiles];
 
       for i in range(self.fileRange[0], self.fileRange[1]):
@@ -44,7 +46,8 @@ class Read:
 
    
    def readFile(self, filePath, datasetID):
-      # print "IN READ FUNCTION", datasetID
+      
+      print "IN READ FUNCTION", datasetID
       f = open(filePath,'r')
       title = ""
       subtitle = ""
@@ -102,7 +105,7 @@ class Read:
                dataVector.append(num)
 
             # print "DATASET ID", datasetID
-            # print "LABEL INDEX", labelIndex
+            print "LABEL INDEX", labelIndex
             L=labels[labelIndex]
             dataDictionary["T"+str(datasetID)+"-"+L]=dataVector
             labelIndex+=1
