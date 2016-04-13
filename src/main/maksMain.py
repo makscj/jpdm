@@ -59,8 +59,8 @@ def experiment2(datasets, numClusters, dimensionality):
 
 	
 	for d in datasets:
-		
-		reducedDictionary = regression.getReducedSpace(d.getVectors(), dimensionality)
+
+		reducedDictionary = regression.getReducedSpacePCA(d.getVectors(), dimensionality)
 		d.setReducedDictionary(reducedDictionary, dimensionality)
 	
 	# ------------------------------------------------------------
@@ -77,12 +77,13 @@ def experiment2(datasets, numClusters, dimensionality):
 		# print d
 		normalizedDictionaries.append(d.getReducedVectors()) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
+	print normalizedDictionaries
 	# ------------------------------------------------------------
 	# PART 3: RUN
 	# ------------------------------------------------------------
 #	print normalizedDictionaries
 	###################---CLUSTERING---#####################
-	clusterResults  = cluster.gonzalez(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.euclidean);
+	clusterResults  = cluster.lloyds(util.crunchDictionaryList(normalizedDictionaries), numClusters, distance.infNorm);
 
 	# ------------------------------------------------------------
 	# PART 4: WRITE RESULTS 
