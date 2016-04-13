@@ -1,0 +1,167 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 5
+Number of clusters: 37
+
+Clustering algorithm: lloyds
+Distance measurement: euclidean
+Vector configuration: configured using regression, reduced to dimensionality:, 7
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T27-hiroshima-ken
+
+CLUSTER 1:
+
+	T27-gifu-ken
+
+CLUSTER 2:
+
+	T27-chiba-ken
+	T27-toyama-ken
+	T27-akita-ken
+
+CLUSTER 3:
+
+	T27-aichi-ken
+
+CLUSTER 4:
+
+	T27-kyoto-fu
+
+CLUSTER 5:
+
+	T27-shizuoka-ken
+
+CLUSTER 6:
+
+	T27-miyazaki-ken
+
+CLUSTER 7:
+
+	T27-kochi-ken
+
+CLUSTER 8:
+
+	T27-gumma-ken
+
+CLUSTER 9:
+
+	T27-aomori-ken
+	T27-ishikawa-ken
+
+CLUSTER 10:
+
+	T27-kumamoto-ken
+
+CLUSTER 11:
+
+	T27-saitama-ken
+	T27-ehime-ken
+
+CLUSTER 12:
+
+	T27-saga-ken
+
+CLUSTER 13:
+
+	T27-kanagawa-ken
+
+CLUSTER 14:
+
+	T27-niigata-ken
+
+CLUSTER 15:
+
+	T27-fukuoka-ken
+	T27-shimane-ken
+
+CLUSTER 16:
+
+	T27-kagawa-ken
+
+CLUSTER 17:
+
+	T27-yamanashi-ken
+
+CLUSTER 18:
+
+	T27-yamaguchi-ken
+
+CLUSTER 19:
+
+	T27-wakayama-ken
+
+CLUSTER 20:
+
+	T27-nara-ken
+
+CLUSTER 21:
+
+	T27-mie-ken
+
+CLUSTER 22:
+
+	T27-tokushima-ken
+
+CLUSTER 23:
+
+	T27-fukui-ken
+	T27-fukushima-ken
+
+CLUSTER 24:
+
+	T27-oita-ken
+
+CLUSTER 25:
+
+	T27-hokkaido
+	T27-okayama-ken
+
+CLUSTER 26:
+
+	T27-tokyo-to
+
+CLUSTER 27:
+
+	T27-tochigi-ken
+
+CLUSTER 28:
+
+	T27-tottori-ken
+	T27-shiga-ken
+
+CLUSTER 29:
+
+	T27-iwate-ken
+
+CLUSTER 30:
+
+	T27-miyagi-ken
+
+CLUSTER 31:
+
+	T27-osaka-fu
+
+CLUSTER 32:
+
+	T27-kagoshima-ken
+
+CLUSTER 33:
+
+	T27-yamagata-ken
+
+CLUSTER 34:
+
+	T27-hyogo-ken
+	T27-ibaraki-ken
+
+CLUSTER 35:
+
+	T27-okinawa-ken
+
+CLUSTER 36:
+
+	T27-nagano-ken
+	T27-nagasaki-ken

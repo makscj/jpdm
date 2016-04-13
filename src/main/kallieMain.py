@@ -133,6 +133,92 @@ def experiment4(datasets, distanceMeasure, distanceMeasureString, dimDivisor):
 
 
 
+# normalizeStandardize
+# Gonzalez
+# Distance passed as argument: distance.euclidean
+
+# Automatically generates results for every N
+# datasets: Sets to be clustered 
+# dimensionality: If >0, then set to this value, if <=0 set to maximum valid dimensionality for  this data.
+def experiment5(datasets, distanceMeasure, distanceMeasureString, dimDivisor, uniquePiece):
+
+	expIndex = str(5)
+
+	clusterFileNames=[]
+	centerCosts = []
+	meanCosts = []
+
+	# First, find the number of examples between all datasets. 
+	# This is the maximum number of clusters that can be made.
+	maxClusters = 0
+	dimensionality = 0
+	for d in datasets:
+		dimensionality = d.getMaximumDimensionality()/dimDivisor
+		print "dimensionality", dimensionality
+		maxClusters+=d.getNumPoints()
+
+
+	# --------------------------------------------------------------------------------------
+	# --------------------------------------------------------------------------------------
+	# Now, run experiment for every possible number of clusters
+	for numClusters in range(1, maxClusters+1):
+
+		# ------------------------------------------------------------
+		# PART 1: CHOOSING DATA (columns)
+		# ------------------------------------------------------------
+		for d in datasets:
+			reducedDictionary = regression.getLowerSpace(d.getVectors(), dimensionality)
+			d.setReducedDictionary(reducedDictionary, dimensionality)
+		
+		# ------------------------------------------------------------
+		# PART 2: NORMALIZATION AND CHOOSING DISTANCE MEASURE 
+		# ------------------------------------------------------------
+
+		###############---VECTOR NORMALIZATION---################
+
+		# At this point, have list of dictionaries of uniform dimensionality. 
+		# Each dictionary contains labels mapping to vectors.
+		normalizedDictionaries = []
+		for d in datasets:
+			# print d, "\n"
+			# print d
+			normalizedDictionaries.append(normalize.normalizeStandardize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
+
+		# ------------------------------------------------------------
+		# PART 3: RUN
+		# ------------------------------------------------------------
+		###################---CLUSTERING---#####################
+		crunchedData = util.crunchDictionaryList(normalizedDictionaries)
+		clusterResults  = cluster.lloyds(crunchedData, numClusters, distanceMeasure);
+
+		# ------------------------------------------------------------
+		# PART 4: Get costs (if gonzalez or lloyds)
+		# ------------------------------------------------------------
+		centerCosts.append(cluster.centerCost(crunchedData, clusterResults[0], clusterResults[1], distance.euclidean))
+		meanCosts.append(cluster.meanCost(crunchedData, clusterResults[0], clusterResults[1], distance.euclidean))
+		
+		# ------------------------------------------------------------
+		# PART 5: WRITE RESULTS 
+		# ------------------------------------------------------------
+		##################---STORE RESULTS---####################
+		# def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
+		# Prepare to write experiment file -- fill in the below values for this experiment.
+
+		clusteringAlgorithmInfo = "lloyds"
+		distanceMeasurementInfo = distanceMeasureString
+		vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
+		clusterFileNames.append(util.writeFile(expIndex, uniquePiece, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, "Normalizatiom: Standard",clusterResults[1]))
+
+	# --------------------------------------------------------------------------------------
+	# --------------------------------------------------------------------------------------
+	# WRITE COST INFO TO FILE
+	util.writeCostFile(expIndex, uniquePiece, maxClusters, centerCosts, meanCosts, clusterFileNames)
+
+
+
+
+
+
 if __name__ == "__main__":
 
 	#-----------------------------------
@@ -144,5 +230,6 @@ if __name__ == "__main__":
 
 	for d in range(23, 33):
 
-		experiment4([datasets[d]], distance.euclidean, "euclidean",2)
-		# experiment4([datasets[d]], distance.manhattan, "manhattan",2)
+
+		experiment5([datasets[d]], distance.euclidean, "euclidean",2, str(5)+"/lloyds/euclidean/T"+str(d)+"/")
+		experiment5([datasets[d]], distance.manhattan, "manhattan",2, str(5)+"/lloyds/manhattan/T"+str(d)+"/")

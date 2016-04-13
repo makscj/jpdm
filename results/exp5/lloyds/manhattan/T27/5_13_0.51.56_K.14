@@ -1,0 +1,98 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 5
+Number of clusters: 14
+
+Clustering algorithm: lloyds
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 7
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T27-tottori-ken
+	T27-shiga-ken
+	T27-hiroshima-ken
+
+CLUSTER 1:
+
+	T27-oita-ken
+	T27-saga-ken
+	T27-fukuoka-ken
+	T27-shimane-ken
+
+CLUSTER 2:
+
+	T27-wakayama-ken
+	T27-yamagata-ken
+	T27-gifu-ken
+	T27-yamanashi-ken
+	T27-tochigi-ken
+
+CLUSTER 3:
+
+	T27-gumma-ken
+
+CLUSTER 4:
+
+	T27-hyogo-ken
+	T27-ibaraki-ken
+
+CLUSTER 5:
+
+	T27-chiba-ken
+	T27-toyama-ken
+	T27-akita-ken
+
+CLUSTER 6:
+
+	T27-kyoto-fu
+	T27-aomori-ken
+	T27-ishikawa-ken
+
+CLUSTER 7:
+
+	T27-hokkaido
+	T27-okayama-ken
+	T27-nagano-ken
+	T27-kumamoto-ken
+
+CLUSTER 8:
+
+	T27-miyagi-ken
+	T27-nagasaki-ken
+	T27-nara-ken
+	T27-kanagawa-ken
+	T27-kagawa-ken
+	T27-mie-ken
+
+CLUSTER 9:
+
+	T27-tokushima-ken
+
+CLUSTER 10:
+
+	T27-iwate-ken
+	T27-fukui-ken
+	T27-fukushima-ken
+
+CLUSTER 11:
+
+	T27-tokyo-to
+
+CLUSTER 12:
+
+	T27-shizuoka-ken
+	T27-kagoshima-ken
+	T27-aichi-ken
+	T27-kochi-ken
+	T27-miyazaki-ken
+
+CLUSTER 13:
+
+	T27-saitama-ken
+	T27-osaka-fu
+	T27-niigata-ken
+	T27-okinawa-ken
+	T27-yamaguchi-ken
+	T27-ehime-ken
