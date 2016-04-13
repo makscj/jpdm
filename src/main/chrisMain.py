@@ -95,15 +95,19 @@ def experiment3(datasets, dimensionality):
 		for d in datasets:
 			# print d, "\n"
 			# print d
-			normalizedDictionaries.append(normalize.normalizeMinMax(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
+			normalizedDictionaries.append(normalize.normalizeStandardize(d.getReducedVectors())) # THERE ARE ALSO OTHER WAYS TO NORMALIZE
 
 		# ------------------------------------------------------------
 		# PART 3: RUN
 		# ------------------------------------------------------------
 		###################---CLUSTERING---#####################
 
+		# clusterList = [cluster.gonzalez,cluster.lloyds]
+
+		# distanceList = [distance.euclidean,distance.manhattan,distance.infNorm,distance.jaccard,distance.cosine]
+
 		crunchedData = util.crunchDictionaryList(normalizedDictionaries)
-		clusterResults  = cluster.gonzalez(crunchedData, numClusters, distance.euclidean);
+		clusterResults  = cluster.lloyds(crunchedData, numClusters, distance.euclidean);
 
 		# ------------------------------------------------------------
 		# PART 4: Get costs (if gonzalez or lloyds)
@@ -118,7 +122,7 @@ def experiment3(datasets, dimensionality):
 		# def writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo, vectorConfigurationInfo, clusters):
 		# Prepare to write experiment file -- fill in the below values for this experiment.
 
-		clusteringAlgorithmInfo = "gonzalez"
+		clusteringAlgorithmInfo = "lloyds"
 		distanceMeasurementInfo = "euclidean"
 		vectorConfigurationInfo = "{}, {}".format("configured using regression, reduced to dimensionality:", dimensionality)
 		clusterFileNames.append(util.writeFile(expIndex, numClusters, clusteringAlgorithmInfo, distanceMeasurementInfo,vectorConfigurationInfo, 

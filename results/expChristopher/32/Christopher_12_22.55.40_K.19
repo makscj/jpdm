@@ -1,0 +1,113 @@
+CONFIGURATION DETAILS:
+
+Experiment index: Christopher
+Number of clusters: 19
+
+Clustering algorithm: gonzalez
+Distance measurement: euclidean
+Vector configuration: configured using regression, reduced to dimensionality:, 71
+Notes: Using All columns, using euclidean distatnce for the center costs and mean costs, regression being used is PCA
+
+CLUSTER 0:
+
+	T20-yamagata
+	T20-nagasaki
+	T20-shizuoka
+	T20-okayama
+
+CLUSTER 1:
+
+	T20-tokyo
+
+CLUSTER 2:
+
+	T20-hokkaido
+
+CLUSTER 3:
+
+	T20-chiba
+	T20-ishikawa
+
+CLUSTER 4:
+
+	T20-kumamoto
+
+CLUSTER 5:
+
+	T20-miyagi
+	T20-tochigi
+	T20-kagoshima
+	T20-kanagawa
+	T20-niigata
+
+CLUSTER 6:
+
+	T20-shimane
+
+CLUSTER 7:
+
+	T20-osaka
+
+CLUSTER 8:
+
+	T20-nara
+	T20-saga
+	T20-hiroshima
+
+CLUSTER 9:
+
+	T20-tokushima
+
+CLUSTER 10:
+
+	T20-wakayama
+
+CLUSTER 11:
+
+	T20-saitama
+	T20-okinawa
+	T20-fukui
+
+CLUSTER 12:
+
+	T20-shiga
+	T20-aichi
+	T20-yamaguchi
+	T20-fukushima
+
+CLUSTER 13:
+
+	T20-gifu
+	T20-hyogo
+	T20-mie
+	T20-kagawa
+	T20-iwate
+
+CLUSTER 14:
+
+	T20-gumma
+
+CLUSTER 15:
+
+	T20-kyoto
+	T20-miyazaki
+	T20-fukuoka
+	T20-yamanashi
+	T20-toyama
+
+CLUSTER 16:
+
+	T20-ibaraki
+
+CLUSTER 17:
+
+	T20-tottori
+	T20-kochi
+	T20-nagano
+
+CLUSTER 18:
+
+	T20-aomori
+	T20-akita
+	T20-ehime
+	T20-oita
