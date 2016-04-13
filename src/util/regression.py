@@ -99,3 +99,26 @@ def getReducedSpace(data, k):
 	lower = mapToPlane(Uk, Sk, Vk);
 	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
 
+# This is a transformation to lower space. The input data is translated to
+# k dimensions.
+def getLowerSpacePCA(data, k):
+	(keys, matrix) = createMatrix(data);
+
+	(U, S, V) = pca(matrix);
+
+	(Uk, Sk, Vk) = subsvd(U, S, V, k); #
+	lower = mapToLowerSpace(matrix, Vk);
+	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
+
+# Useful for casting high dimensional data to lower dimensions, in order to
+# represent the data in a lower space. Will be useful for being able to 
+# visualize high dimensional data in 2D or 3D space. (Doesn't actually
+# change the nature of the data--this is a projection onto lower space)
+def getReducedSpacePCA	(data, k):
+	(keys, matrix) = createMatrix(data);
+	(U, S, V) = pca(matrix);
+	(Uk, Sk, Vk) = subsvd(U, S, V, k);
+	print np.transpose(V)[:,0:k];
+	lower = mapToPlane(Uk, Sk, Vk);
+	return dict(zip(keys, [lower[k,:].tolist()[0] for k in range(lower.shape[0])]));
+

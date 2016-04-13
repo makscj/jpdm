@@ -60,7 +60,7 @@ def experiment2(datasets, numClusters, dimensionality):
 	
 	for d in datasets:
 		print d.getVectors();
-		reducedDictionary = regression.getReducedSpace(d.getVectors(), dimensionality)
+		reducedDictionary = regression.getReducedSpacePCA(d.getVectors(), dimensionality)
 		d.setReducedDictionary(reducedDictionary, dimensionality)
 	
 	# ------------------------------------------------------------
