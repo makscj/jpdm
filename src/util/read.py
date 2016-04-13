@@ -21,7 +21,9 @@ class Read:
       verbose = False
       dir = os.path.dirname(sys.argv[0])
       listDirPath  =  os.path.join(dir, "../../data/FormattedDataFiles/")
-      nFiles = len(os.listdir(listDirPath))
+      # nFiles = len(os.listdir(listDirPath))
+      nFiles = len(os.listdir(listDirPath))-1
+
       # print nFiles
       self.fileRange = [0, nFiles];
 
