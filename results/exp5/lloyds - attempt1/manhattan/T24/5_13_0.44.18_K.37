@@ -1,0 +1,167 @@
+CONFIGURATION DETAILS:
+
+Experiment index: 5
+Number of clusters: 37
+
+Clustering algorithm: lloyds
+Distance measurement: manhattan
+Vector configuration: configured using regression, reduced to dimensionality:, 6
+Notes: Normalizatiom: Standard
+
+CLUSTER 0:
+
+	T24-fukuoka-ken
+
+CLUSTER 1:
+
+	T24-yamanashi-ken
+
+CLUSTER 2:
+
+	T24-aomori-ken
+
+CLUSTER 3:
+
+	T24-tokushima-ken
+
+CLUSTER 4:
+
+	T24-aichi-ken
+
+CLUSTER 5:
+
+	T24-yamagata-ken
+	T24-niigata-ken
+
+CLUSTER 6:
+
+	T24-gifu-ken
+
+CLUSTER 7:
+
+	T24-shizuoka-ken
+
+CLUSTER 8:
+
+	T24-ishikawa-ken
+
+CLUSTER 9:
+
+	T24-kanagawa-ken
+
+CLUSTER 10:
+
+	T24-shimane-ken
+	T24-okayama-ken
+
+CLUSTER 11:
+
+	T24-fukui-ken
+
+CLUSTER 12:
+
+	T24-tochigi-ken
+
+CLUSTER 13:
+
+	T24-toyama-ken
+
+CLUSTER 14:
+
+	T24-mie-ken
+
+CLUSTER 15:
+
+	T24-kochi-ken
+
+CLUSTER 16:
+
+	T24-okinawa-ken
+
+CLUSTER 17:
+
+	T24-hyogo-ken
+
+CLUSTER 18:
+
+	T24-osaka-fu
+
+CLUSTER 19:
+
+	T24-hokkaido
+
+CLUSTER 20:
+
+	T24-kumamoto-ken
+
+CLUSTER 21:
+
+	T24-saitama-ken
+
+CLUSTER 22:
+
+	T24-miyagi-ken
+
+CLUSTER 23:
+
+	T24-tokyo-to
+	T24-miyazaki-ken
+	T24-kyoto-fu
+
+CLUSTER 24:
+
+	T24-ehime-ken
+	T24-nagano-ken
+
+CLUSTER 25:
+
+	T24-shiga-ken
+
+CLUSTER 26:
+
+	T24-akita-ken
+
+CLUSTER 27:
+
+	T24-tottori-ken
+
+CLUSTER 28:
+
+	T24-gumma-ken
+
+CLUSTER 29:
+
+	T24-iwate-ken
+	T24-oita-ken
+
+CLUSTER 30:
+
+	T24-kagoshima-ken
+
+CLUSTER 31:
+
+	T24-kagawa-ken
+	T24-nagasaki-ken
+	T24-yamaguchi-ken
+	T24-fukushima-ken
+
+CLUSTER 32:
+
+	T24-ibaraki-ken
+	T24-saga-ken
+
+CLUSTER 33:
+
+	T24-wakayama-ken
+
+CLUSTER 34:
+
+	T24-nara-ken
+
+CLUSTER 35:
+
+	T24-hiroshima-ken
+
+CLUSTER 36:
+
+	T24-chiba-ken
